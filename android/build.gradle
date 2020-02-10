@@ -1,0 +1,65 @@
+group 'com.sm9i.aliyun_video'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.2.71'
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        jcenter{url "http://jcenter.bintray.com/"}
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
+        mavenCentral()
+        jcenter{url "http://jcenter.bintray.com/"}
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 28
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+    defaultConfig {
+        minSdkVersion 16
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+//    implementation 'com.aliyun.video.android:svideosnap:3.13.0'//短视频基础版SDK必须依赖
+    implementation 'com.aliyun.video.android:core:1.2.2' //核心库必须依赖
+    implementation 'com.alivc.conan:AlivcConan:1.0.1'//核心库必须依赖
+    implementation 'com.aliyun.video.android:AlivcSvideoFFmpeg:1.0.2'//必须依赖
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+
+    //implementation 'com.aliyun.video.android:upload:1.5.4'// 上传库,如不需要上传可不依赖
+
+    implementation 'com.aliyun.video.android:svideopro:3.13.0'//短视频专业版SDK必须依赖
+    implementation 'com.faceunity:nama:6.0.0-lite'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+}

@@ -1,0 +1,151 @@
+<resources>
+
+
+    <string name="alivc_base_version">SDK VERSION INFO</string>
+
+    <!-- 美颜相关  start -->
+    <string name="alivc_base_beauty">Skin Filter</string>
+    <string name="alivc_base_beauty_face">Face Filter</string>
+    <string name="alivc_base_fine_tune">Makeup</string>
+    <string name="alivc_base_stickers">Stickers</string>
+    <string name="alivc_base_filter">Filter</string>
+
+    <string name="alivc_base_beauty_whitening">Skin Whitening</string>
+    <string name="alivc_base_beauty_buffing">Skin Polishing</string>
+    <string name="alivc_base_beauty_blush">Skin Shining</string>
+    <string name="alivc_base_beauty_bigeye">BigEye</string>
+    <string name="alivc_base_beauty_thinface">SlimFace</string>
+    <string name="alivc_base_beauty_level_advanced">Advanced</string>
+
+    <!-- 美颜相关  end   -->
+
+    <string name="alivc_base_tips_fine_tuning">Tuning</string>
+    <string name="alivc_base_beauty_copyright">Advanced features are supported by FaceUnity</string>
+    、
+    <string name="alivc_base_beauty_copyright_link">View details</string>
+    <string name="alivc_base_svideo_next">Next</string>
+
+
+    <string name="alivc_recorder_record_dialog_not_setting">Cancel</string>
+    <string name="alivc_recorder_record_tip_phone_state_calling">Calling, Recording will be muted</string>
+    <string name="alivc_record_request_permission_positive_btn_text">Setting</string>
+    <string name="alivc_recorder_record_dialog_permission_remind">Please allow ApsaraVideo to access Photos/camera/sdcard first</string>
+
+
+    <string name="alivc_recorder_record_start_recorder">Record</string>
+    <string name="alivc_mix_record_continue">视频太短，再拍一段儿吧</string>
+    <string name="alivc_recorder_record_create_video">Creating video</string>
+    <string name="alivc_editor_publish_compose_failed">Video creation failed</string>
+
+    <string name="alivc_common_no_camera_permission">Camera usage is not permitted, please open first</string>
+    <string name="alivc_common_no_record_bluetooth_permission">Bluetooth is not permitted to record, please open first</string>
+    <string name="alivc_common_no_record_audio_permission">Audio is not permitted to record, please open first</string>
+    <string name="alivc_common_no_read_phone_state_permission">Phone state is not permitted to read, please opend first</string>
+    <string name="alivc_common_no_write_external_storage_permission">External storage is not permitted to write, please open first</string>
+    <string name="alivc_common_no_read_external_storage_permission">External storage is not permitted to read, please open first</string>
+    <string name="alivc_common_note">Note</string>
+    <string name="alivc_common_confirm">Confirm</string>
+    <string name="alivc_common_no_permission">no permission</string>
+
+
+    <string name="alivc_common_operate_success">Success</string>
+    <string name="alivc_common_operate_fail">Fail</string>
+    <string name="alivc_common_loading">Loading</string>
+    <string name="alivc_common_device_memory_not_enough">Insufficient memory. Please clear memory cache</string>
+    <string name="alivc_common_creating_video_remind">Creating video，Please wait </string>
+
+    <string name="alivc_common_download">Download</string>
+    <string name="alivc_common_cancel">Cancel</string>
+    <string name="alivc_common_no_free_memory">disk space not enough</string>
+
+    <string name="alivc_media_setting_import_edit">导入编辑</string>
+    <string name="alivc_media_frame_rate">帧率</string>
+    <string name="alivc_media_gop">关键帧间隔</string>
+    <string name="alivc_media_frame_rate_hint">建议20-30，默认30</string>
+    <string name="alivc_media_gop_hint">建议1-300，默认250</string>
+    <string name="alivc_media_resolution">分辨率</string>
+    <string name="alivc_media_crop_mode">裁剪模式</string>
+    <string name="alivc_media_mode_fill">填充</string>
+    <string name="alivc_media_mode_crop">裁剪</string>
+    <string name="alivc_media_start_import">开始导入</string>
+    <string name="alivc_media_gallery_all_media">相机胶卷</string>
+    <string name="alivc_media_resolution_1_1">540*540</string>
+    <string name="alivc_media_resolution_3_4">540*720</string>
+    <string name="alivc_media_resolution_9_16">540*960</string>
+    <string name="alivc_media_video_quality">Quality</string>
+    <string name="alivc_media_video_quality_low">低</string>
+    <string name="alivc_media_video_quality_meidan">中</string>
+    <string name="alivc_media_video_quality_high">高</string>
+    <string name="alivc_media_video_quality_super">极高</string>
+    <string name="alivc_media_wait">请稍候</string>
+    <string name="alivc_media_video_crop_erroe">视频格式不支持</string>
+    <string name="alivc_media_sdcard_not_ready">SDCARD 没有准备好</string>
+    <string name="alivc_media_video_duration">%1$02d:%2$02d:%3$02d</string>
+
+    <string name="alivc_media_message_max_duration_import">视频总时长不超过5分钟，请裁剪后继续!</string>
+    <string name="alivc_media_total_duration_label_import">总时长</string>
+    <string name="alivc_media_please_select_video">请选择视频</string>
+    <string name="alivc_media_film_tail">片尾</string>
+    <string name="alivc_media__hardware_encoder">硬编</string>
+    <string name="alivc_media__openh264_encoder">OpenH264软编</string>
+    <string name="alivc_media__ffmpeg_encoder">FFmpeg软编e</string>
+
+    <string name="alivc_media_aliyun_video_codec">Encoding</string>
+
+    <string name="alivc_recorder_setting_start">Start</string>
+    <string name="alivc_recorder_setting_open_skin_filter">Skin Filter Close</string>
+    <string name="alivc_recorder_setting_width">Width</string>
+    <string name="alivc_recorder_setting_height">Height</string>
+
+    <string name="alivc_recorder_control_filter">Filter</string>
+    <string name="alivc_recorder_setting_close_face_detection">Face Detection Close</string>
+    <string name="alivc_recorder_setting_open_face_detection">Face Detection Open</string>
+
+    <string name="alivc_recorder_setting_tittle">Record Settings</string>
+
+    <string name="alivc_recorder_dialog_filter_none">Original</string>
+
+    <string name="alivc_recorder_control_delete">Delete</string>
+
+
+    <string name="alivc_recorder_menu_action_settings">Settings</string>
+
+    <string name="alivc_recorder_play_tip_video_save">The video is saved to Photos</string>
+
+    <string name="aliyun_beauty_face">Skin Filter</string>
+    <string name="aliyun_face_sticker">Stickers</string>
+
+
+    <string name="alivc_music_network_not_connect">No network is found. Check your network and try again</string>
+    <string name="alivc_music_no_free_memory">Insufficient memory. Please clear memory cache</string>
+    <string name="alivc_music_empty_music">Original</string>
+
+    <string name="alivc_music_online_music">Online Music</string>
+    <string name="alivc_music_local_music">Local Music</string>
+    <string name="alivc_music_copyright">Provided by Taihe Music DMH</string>
+    <string name="alivc_music_copyright_link">How to get</string>
+    <string name="alivc_music_complete">OK</string>
+
+    <string name="alivc_music_play_url_null">Url is empty</string>
+
+
+    <!--目前用到的-->
+    <string name="alivc_recorder_record_aspect_ratio_content">Change</string>
+    <string name="alivc_recorder_control_music">Music</string>
+    <string name="alivc_music_select_music">Music</string>
+
+    <string name="alivc_recorder_control_long_press">Hold</string>
+    <string name="alivc_recorder_control_press">Hold</string>
+    <string name="alivc_recorder_control_click">Tap</string>
+
+    <string name="aliyun_rate_very_slow">Slower</string>
+    <string name="alivc_recorder_control_rate_slow">Slow</string>
+    <string name="alivc_base_beauty_level_normal">Normal</string>
+    <string name="alivc_recorder_control_rate_standard">Normal</string>
+    <string name="alivc_recorder_control_rate_fast">Fast</string>
+    <string name="alivc_recorder_control_rate_very_fast">Faster</string>
+
+    <string name="alivc_media_next_camera_roll_import">Next</string>
+
+
+</resources>

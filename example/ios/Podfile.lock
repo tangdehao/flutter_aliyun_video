@@ -1,0 +1,162 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - AlivcConan (1.0.2):
+    - AlivcConan/AlivcConan (= 1.0.2)
+  - AlivcConan/AlivcConan (1.0.2)
+  - aliyun_video (0.0.1):
+    - AFNetworking
+    - AlivcConan
+    - AliyunOSSiOS
+    - AliyunVideoSDKStd
+    - Flutter
+    - FMDB
+    - JSONModel
+    - LBXScan/LBXNative
+    - LBXScan/UI
+    - LXReorderableCollectionViewFlowLayout
+    - MBProgressHUD
+    - MJRefresh
+    - Nama-lite
+    - QuCore-ThirdParty
+    - SDWebImage
+    - TTRangeSlider
+    - UMCAnalytics
+    - UMCCommon
+    - VODUpload
+    - ZipArchive
+  - AliyunOSSiOS (2.10.8)
+  - AliyunVideoSDKStd (3.14.0)
+  - Flutter (1.0.0)
+  - FMDB (2.7):
+    - FMDB/standard (= 2.7)
+  - FMDB/standard (2.7)
+  - JSONModel (1.7.0)
+  - LBXScan/LBXNative (2.3):
+    - LBXScan/Types (~> 2.2)
+  - LBXScan/Types (2.3)
+  - LBXScan/UI (2.3):
+    - LBXScan/Types (~> 2.2)
+  - LXReorderableCollectionViewFlowLayout (0.2.1)
+  - MBProgressHUD (1.1.0)
+  - MJRefresh (3.1.15.7)
+  - Nama-lite (5.9.0)
+  - permission_handler (4.0.0):
+    - Flutter
+  - QuCore-ThirdParty (3.14.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - TTRangeSlider (1.0.6)
+  - UMCAnalytics (6.0.1):
+    - UMCCommon
+  - UMCCommon (2.0.0)
+  - video_player (0.0.1):
+    - Flutter
+  - VODUpload (1.5.3):
+    - AliyunOSSiOS
+  - ZipArchive (1.4.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - AlivcConan (= 1.0.2)
+  - aliyun_video (from `.symlinks/plugins/aliyun_video/ios`)
+  - AliyunOSSiOS
+  - AliyunVideoSDKStd (= 3.14.0)
+  - Flutter (from `Flutter`)
+  - FMDB (from `https://github.com/ccgus/fmdb.git`, tag `2.7`)
+  - JSONModel (~> 1.7.0)
+  - LBXScan/LBXNative (~> 2.3)
+  - LBXScan/UI (~> 2.3)
+  - LXReorderableCollectionViewFlowLayout (~> 0.2.1)
+  - MBProgressHUD (~> 1.1.0)
+  - MJRefresh (~> 3.1.15.7)
+  - Nama-lite (~> 5.9.0)
+  - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
+  - QuCore-ThirdParty (= 3.14.0)
+  - SDWebImage (~> 4.0.0)
+  - TTRangeSlider (~> 1.0.6)
+  - UMCAnalytics (= 6.0.1)
+  - UMCCommon (= 2.0.0)
+  - video_player (from `.symlinks/plugins/video_player/ios`)
+  - VODUpload
+  - ZipArchive (= 1.4.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - AlivcConan
+    - AliyunOSSiOS
+    - AliyunVideoSDKStd
+    - JSONModel
+    - LBXScan
+    - LXReorderableCollectionViewFlowLayout
+    - MBProgressHUD
+    - MJRefresh
+    - Nama-lite
+    - QuCore-ThirdParty
+    - SDWebImage
+    - TTRangeSlider
+    - UMCAnalytics
+    - UMCCommon
+    - VODUpload
+    - ZipArchive
+
+EXTERNAL SOURCES:
+  aliyun_video:
+    :path: ".symlinks/plugins/aliyun_video/ios"
+  Flutter:
+    :path: Flutter
+  FMDB:
+    :git: https://github.com/ccgus/fmdb.git
+    :tag: '2.7'
+  permission_handler:
+    :path: ".symlinks/plugins/permission_handler/ios"
+  video_player:
+    :path: ".symlinks/plugins/video_player/ios"
+
+CHECKOUT OPTIONS:
+  FMDB:
+    :git: https://github.com/ccgus/fmdb.git
+    :tag: '2.7'
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AlivcConan: df8627643b3794c329e4c8eb894428610be83e88
+  aliyun_video: 7d45429fae7be48fcb58bad6575d782a4b5e5af0
+  AliyunOSSiOS: 8db92936545593b9e5c66d680ef2ac0738946651
+  AliyunVideoSDKStd: a03f23db435088e564baefb074ce2b70973f8992
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  FMDB: 115114e988a7c92a5191f1334c46c99b0a477700
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  LBXScan: e51449f0832d1fe17da632af0d22adeb3cfa3543
+  LXReorderableCollectionViewFlowLayout: acd6fe9fd0800efc656266a345130a2f634abf85
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  Nama-lite: f046ff8b9c53a0d6f5bf344ee78850af3d7bf24b
+  permission_handler: 0fb88b8a3c23e31e5de45b8f1bb8b7de28cf8941
+  QuCore-ThirdParty: 04b95bda641d0f870247e0e0b46fa6290eefec01
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  TTRangeSlider: 78188bea83f6471a06f75adbc88da5e990baeafe
+  UMCAnalytics: c267acd9bb4a87e5f01735c158b63a617908f92e
+  UMCCommon: 79b5a614c958db367113eed5740109d9a98e1223
+  video_player: 69c5f029fac4ffe4fc8a85ea7f7b793709661549
+  VODUpload: a76d07081e4faf9bd9e7535265901cde2cea507f
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
+
+PODFILE CHECKSUM: 0fa8b388e4785a5b1e78d972c89c64d5d606014a
+
+COCOAPODS: 1.8.3

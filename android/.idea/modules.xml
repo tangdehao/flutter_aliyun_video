@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/aliyun_video.iml" filepath="$PROJECT_DIR$/aliyun_video.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../example/android/android.iml" filepath="$PROJECT_DIR$/../example/android/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../example/android/app/app.iml" filepath="$PROJECT_DIR$/../example/android/app/app.iml" />
+      <module fileurl="file://$USER_HOME$/SDK/FlutterSDK/flutter/.pub-cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/permission_handler-4.0.0/android/permission_handler.iml" filepath="$USER_HOME$/SDK/FlutterSDK/flutter/.pub-cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/permission_handler-4.0.0/android/permission_handler.iml" />
+      <module fileurl="file://$USER_HOME$/SDK/FlutterSDK/flutter/.pub-cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/video_player-0.10.4+1/android/video_player.iml" filepath="$USER_HOME$/SDK/FlutterSDK/flutter/.pub-cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/video_player-0.10.4+1/android/video_player.iml" />
+    </modules>
+  </component>
+</project>
