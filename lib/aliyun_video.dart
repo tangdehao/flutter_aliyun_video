@@ -44,6 +44,30 @@ class AliyunVideo {
     if (res == null) return null;
     return AliyunResult.fromMap(res);
   }
+
+  static Future<AliyunResult> startCooperationVideo({
+    int mResolutionMode = ResolutionMode.DEFAULT_RESOLUTION_720P,
+    int mMaxDuration = 15 * 1000,
+    int mMinDuration = 2 * 1000,
+    int mRatioMode = RatioMode.DEFAULT_RATIO_MODE_9_16,
+    int mGop = 250,
+    int mFrame = 30,
+    String mVideoQuality = QualityMode.DEFAULT_QUALITY_HD,
+    String mVideoCodec = CodecsMode.DEFAULT_CODECS_H264_HARDWARE,
+  }) async {
+    final res = await _channel.invokeMethod('startCooperationVideo', {
+      "mResolutionMode": mResolutionMode,
+      "mMaxDuration": mMaxDuration,
+      "mMinDuration": mMinDuration,
+      "mRatioMode": mRatioMode,
+      "mGop": mGop,
+      "mFrame": mFrame,
+      "mVideoQuality": mVideoQuality,
+      "mVideoCodec": mVideoCodec,
+    });
+    if (res == null) return null;
+    return AliyunResult.fromMap(res);
+  }
 }
 
 class AliyunResult {

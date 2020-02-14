@@ -473,8 +473,8 @@ public class AliyunSVideoRecordView extends FrameLayout
     private void initCountDownView() {
         if (mCountDownView == null) {
             mCountDownView = new AlivcCountDownView(getContext());
-            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,
-                    FrameLayout.LayoutParams.MATCH_PARENT);
+            LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT,
+                    LayoutParams.MATCH_PARENT);
             params.gravity = Gravity.CENTER;
             addView(mCountDownView, params);
         }
@@ -728,7 +728,9 @@ public class AliyunSVideoRecordView extends FrameLayout
             }
 
         });
+
         mControlView.setRecordType(recorder.isMixRecorder());
+
         addSubView(mControlView);
         mControlView.setAspectRatio(mRatioMode);
     }
@@ -1765,7 +1767,7 @@ public class AliyunSVideoRecordView extends FrameLayout
             progressBar.setMessage(getResources().getString(R.string.alivc_recorder_record_create_video));
             progressBar.setCanceledOnTouchOutside(false);
             progressBar.setCancelable(false);
-            progressBar.setProgressStyle(android.app.ProgressDialog.STYLE_SPINNER);
+            progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         }
         progressBar.show();
         mControlView.setCompleteEnable(false);

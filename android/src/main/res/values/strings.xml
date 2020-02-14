@@ -147,5 +147,18 @@
 
     <string name="alivc_media_next_camera_roll_import">Next</string>
 
+    <string name="alivc_recorder_setting_video_style">拍摄方式</string>
+    <string name="alivc_recorder_setting_general_text">普通</string>
+    <string name="alivc_recorder_setting_mix_text">合拍</string>
+    <string name="alivc_progress_content_text">资源拷贝中....</string>
+    <string name="aliyun_start_mix_record">选择合拍视频</string>
+    <string name="alivc_record_request_permission_content_text"><![CDATA[Please allow ApsaraVideo to access Photos/camera/sdcard first，]]></string>
+    <string name="alivc_record_request_permission_negative_btn_text">Cancel</string>
+
+
+    <string name="alivc_record_not_supported_audio">The audio format is invalid</string>
+    <string name="alivc_record_video_crop_failed">Failed to crop the video</string>
+    <string name="alivc_record_request_no_permission_content_text">no permission</string>
+    <string name="alivc_record_error_tip_play_video_error">The video format is invalid</string>
 
 </resources>

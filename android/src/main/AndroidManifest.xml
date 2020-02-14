@@ -19,6 +19,14 @@
             android:name=".aliyun.activity.AlivcSvideoRecordActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AlivcRecordUIStyle" />
+        <activity
+            android:name=".aliyun.activity.AlivcMixMediaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AlivcRecordUIStyle" />
+        <activity
+            android:name=".aliyun.activity.AlivcSvideoMixRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AlivcRecordUIStyle" />
 
 
     </application>

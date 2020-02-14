@@ -29,6 +29,7 @@ import com.sm9i.aliyun_video.aliyun.view.BaseScrollPickerView;
 import com.sm9i.aliyun_video.aliyun.view.StringScrollPicker;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -36,7 +37,8 @@ import java.util.List;
  * <p>
  * 更换录制为 拍照
  */
-public class ControlView extends RelativeLayout implements View.OnTouchListener {
+public class ControlView extends RelativeLayout implements View.OnTouchListener
+{
     private static final String TAG = ControlView.class.getSimpleName();
     private static final int MAX_ITEM_COUNT = 5;
     //美颜和gif
@@ -96,7 +98,7 @@ public class ControlView extends RelativeLayout implements View.OnTouchListener 
     private boolean isRecording = false;
     //
     private int mAspectRatio = AliyunSnapVideoParam.RATIO_MODE_9_16;
-    //录制类型
+    //录制类型 true 为合拍
     private Boolean mRecorderType = false;
 
     public ControlView(Context context) {
@@ -174,9 +176,12 @@ public class ControlView extends RelativeLayout implements View.OnTouchListener 
         //切换摄像头的图片
         aliyunSwitchCamera.setImageDrawable(getSwitchCameraDrawable());
         List<String> strings = new ArrayList<>(2);
+
         strings.add("Photo");
+
         strings.add("Video");
         mPickerView.setData(strings);
+
         //向上的三角形对应的图片
         mPickerView.setCenterItemBackground(UIConfigManager.getDrawableResources(getContext(), R.attr.triangleImage, R.mipmap.alivc_svideo_icon_selected_indicator));
     }
@@ -559,7 +564,7 @@ public class ControlView extends RelativeLayout implements View.OnTouchListener 
      * @param scaleRate
      */
     private void recordBtnScale(float scaleRate) {
-        RelativeLayout.LayoutParams recordBgLp = (RelativeLayout.LayoutParams) aliyunRecordBtn.getLayoutParams();
+        LayoutParams recordBgLp = (LayoutParams) aliyunRecordBtn.getLayoutParams();
         recordBgLp.width = (int) (itemWidth * scaleRate);
         recordBgLp.height = (int) (itemWidth * scaleRate);
         aliyunRecordBtn.setLayoutParams(recordBgLp);
@@ -613,7 +618,8 @@ public class ControlView extends RelativeLayout implements View.OnTouchListener 
         }
         if (mRecorderType) {
             mAlivcAspectRatio.setVisibility(GONE);
-            // mAlivcMusic.setVisibility(GONE);
+            mTitleView.setVisibility(VISIBLE);
+//            mAlivcMusic.setVisibility(GONE);
         }
     }
 
@@ -1004,6 +1010,9 @@ public class ControlView extends RelativeLayout implements View.OnTouchListener 
      */
     public void setRecordType(Boolean recordType) {
         mRecorderType = recordType;
+        if (mRecorderType) {
+            mPickerView.setData(Collections.singletonList("Video"));
+        }
         updateTittleView();
     }
 }
