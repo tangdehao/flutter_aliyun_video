@@ -76,7 +76,7 @@ public class AlivcBeautyFaceFragment extends Fragment implements IPageTab, OnBea
         beautySettingView.setOnBeautyLevelChangeListener(this);
         beautySettingView.setOnBeautyItemSelecedtListener(this);
         beautySettingView.setParams(beautyParams);
-        beautySettingView.setBeautyMode(BeautyMode.Advanced, true);
+        beautySettingView.setBeautyMode(BeautyMode.Normal, true);
         beautySettingView.setOnBeautyDetailClickListener(new OnBeautyDetailClickListener() {
             @Override
             public void onDetailClick() {
@@ -85,7 +85,7 @@ public class AlivcBeautyFaceFragment extends Fragment implements IPageTab, OnBea
                 }
             }
         });
-        Log.e(TAG, "onCreateView: " );
+        Log.e(TAG, "onCreateView: ");
         return beautySettingView;
     }
 
@@ -146,11 +146,15 @@ public class AlivcBeautyFaceFragment extends Fragment implements IPageTab, OnBea
 
         map.put("advance", SharedPreferenceUtils.getBeautyFaceLevel(getContext()));
         map.put("normal", SharedPreferenceUtils.getBeautyNormalFaceLevel(getContext()));
-        if (checkedId == R.id.rb_level_advanced) {
-            beautySettingView.setBeautyMode(BeautyMode.Advanced, true);
-        } else {
+//        if (checkedId == R.id.rb_level_advanced) {
+//            beautySettingView.setBeautyMode(BeautyMode.Advanced, true);
+//        } else {
+//            beautySettingView.setBeautyMode(BeautyMode.Normal, true);
+//        }
+        if (checkedId == R.id.rb_level_normal) {
             beautySettingView.setBeautyMode(BeautyMode.Normal, true);
         }
+
         beautySettingView.setDefaultSelect(map);
     }
 

@@ -144,22 +144,22 @@ public class BeautyDefaultSkinSettingView extends LinearLayout {
 
     private void checkedPosition(int checkedId) {
 
-        if (checkedId == R.id.beauty0 || checkedId == R.id.beauty_advanced_0) {
+        if (checkedId == R.id.beauty0 /*|| checkedId == R.id.beauty_advanced_0*/) {
             skinPosition = 0;
             beautyLevel = BeautyLevel.BEAUTY_LEVEL_ZERO;
-        } else if (checkedId == R.id.beauty1 || checkedId == R.id.beauty_advanced_1) {
+        } else if (checkedId == R.id.beauty1 /*|| checkedId == R.id.beauty_advanced_1*/) {
             skinPosition = 1;
             beautyLevel = BeautyLevel.BEAUTY_LEVEL_ONE;
-        } else if (checkedId == R.id.beauty2 || checkedId == R.id.beauty_advanced_2) {
+        } else if (checkedId == R.id.beauty2 /*|| checkedId == R.id.beauty_advanced_2*/) {
             skinPosition = 2;
             beautyLevel = BeautyLevel.BEAUTY_LEVEL_TWO;
-        } else if (checkedId == R.id.beauty3 || checkedId == R.id.beauty_advanced_3) {
+        } else if (checkedId == R.id.beauty3/* || checkedId == R.id.beauty_advanced_3*/) {
             skinPosition = 3;
             beautyLevel = BeautyLevel.BEAUTY_LEVEL_THREE;
-        } else if (checkedId == R.id.beauty4 || checkedId == R.id.beauty_advanced_4) {
+        } else if (checkedId == R.id.beauty4 /*|| checkedId == R.id.beauty_advanced_4*/) {
             skinPosition = 4;
             beautyLevel = BeautyLevel.BEAUTY_LEVEL_FOUR;
-        } else if (checkedId == R.id.beauty5 || checkedId == R.id.beauty_advanced_5) {
+        } else if (checkedId == R.id.beauty5 /*|| checkedId == R.id.beauty_advanced_5*/) {
             skinPosition = 5;
             beautyLevel = BeautyLevel.BEAUTY_LEVEL_FIVE;
         }

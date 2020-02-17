@@ -358,7 +358,7 @@ public class SharedPreferenceUtils {
 
     public static int getAudienceUser(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHAREDPRE_FILE,
-            Activity.MODE_PRIVATE);
+                Activity.MODE_PRIVATE);
         int audienceUser = sharedPreferences.getInt(ROLE_AUDIENCE_USER, -1);
         return audienceUser;
     }
@@ -380,7 +380,7 @@ public class SharedPreferenceUtils {
 
     public static String getForbidUser(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHAREDPRE_FILE,
-            Activity.MODE_PRIVATE);
+                Activity.MODE_PRIVATE);
         String forbidUser = sharedPreferences.getString(FORBID_USER, "");
         return forbidUser;
     }
@@ -407,13 +407,13 @@ public class SharedPreferenceUtils {
 
     public static int getBeautyFaceLevel(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHAREDPRE_FILE,
-            Activity.MODE_PRIVATE);
+                Activity.MODE_PRIVATE);
         return sharedPreferences.getInt(BEAUTY_FACE_LEVEL, 3);
     }
 
     public static int getBeautySkinLevel(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHAREDPRE_FILE,
-            Activity.MODE_PRIVATE);
+                Activity.MODE_PRIVATE);
         return sharedPreferences.getInt(BEAUTY_SKIN_LEVEL, 3);
     }
 
@@ -445,7 +445,7 @@ public class SharedPreferenceUtils {
 
     public static int getBeautyNormalFaceLevel(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHAREDPRE_FILE,
-            Activity.MODE_PRIVATE);
+                Activity.MODE_PRIVATE);
         return sharedPreferences.getInt(BEAUTY_FACE_NORMAL_LEVEL, 3);
     }
 
@@ -459,7 +459,7 @@ public class SharedPreferenceUtils {
 
     public static BeautyMode getBeautyMode(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHAREDPRE_FILE,
-            Activity.MODE_PRIVATE);
-        return sharedPreferences.getInt(BEAUTY_FACE_MODE, 1) == 0 ? BeautyMode.Normal : BeautyMode.Advanced;
+                Activity.MODE_PRIVATE);
+        return sharedPreferences.getInt(BEAUTY_FACE_MODE, 1) == 0 ? BeautyMode.Normal : BeautyMode.Normal;
     }
 }

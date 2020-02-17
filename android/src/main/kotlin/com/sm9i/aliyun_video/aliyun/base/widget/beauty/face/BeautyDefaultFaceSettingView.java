@@ -28,11 +28,11 @@ import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 public class BeautyDefaultFaceSettingView extends LinearLayout {
     private Context mContext;
     private RadioGroup mRgNormalGroup;
-    private RadioGroup mRgAdvancedGroup;
+    //private RadioGroup mRgAdvancedGroup;
     private ImageView mBtBeautyDetail;
     private BeautyLevel beautyLevel = BeautyLevel.BEAUTY_LEVEL_THREE;
     private int normalPosition = 3;
-    private int advancedPosition = 3;
+    //private int advancedPosition = 3;
     private BeautyMode beautyMode;
     private AlivcPopupView alivcPopupView;
     private Map<String, Integer> beautyMap;
@@ -60,48 +60,49 @@ public class BeautyDefaultFaceSettingView extends LinearLayout {
             return;
         }
         this.beautyMap = map;
-        advancedPosition = map.get("advance") == null ? 3 : map.get("advance");
+       // advancedPosition = map.get("advance") == null ? 3 : map.get("advance");
         normalPosition = map.get("normal") == null ? 3 : map.get("normal");
 
         if (beautyMode == BeautyMode.Normal) {
             normalCheck(normalPosition);
-        } else if (beautyMode == BeautyMode.Advanced) {
-            advancedCheck(advancedPosition);
         }
+//        else if (beautyMode == BeautyMode.Advanced) {
+//        //    advancedCheck(advancedPosition);
+//        }
     }
 
-    private void advancedCheck(int position) {
-        int advanceId;
-        switch (position) {
-            case 0:
-                advanceId = R.id.beauty_advanced_0;
-                break;
-            case 1:
-                advanceId = R.id.beauty_advanced_1;
-                break;
-
-            case 2:
-                advanceId = R.id.beauty_advanced_2;
-                break;
-
-            case 3:
-                advanceId = R.id.beauty_advanced_3;
-                break;
-
-            case 4:
-                advanceId = R.id.beauty_advanced_4;
-                break;
-
-            case 5:
-                advanceId = R.id.beauty_advanced_5;
-                break;
-
-            default:
-                advanceId = R.id.beauty_advanced_3;
-                break;
-        }
-        mRgAdvancedGroup.check(advanceId);
-    }
+//    private void advancedCheck(int position) {
+//        int advanceId;
+//        switch (position) {
+//            case 0:
+//                advanceId = R.id.beauty_advanced_0;
+//                break;
+//            case 1:
+//                advanceId = R.id.beauty_advanced_1;
+//                break;
+//
+//            case 2:
+//                advanceId = R.id.beauty_advanced_2;
+//                break;
+//
+//            case 3:
+//                advanceId = R.id.beauty_advanced_3;
+//                break;
+//
+//            case 4:
+//                advanceId = R.id.beauty_advanced_4;
+//                break;
+//
+//            case 5:
+//                advanceId = R.id.beauty_advanced_5;
+//                break;
+//
+//            default:
+//                advanceId = R.id.beauty_advanced_3;
+//                break;
+//        }
+////        mRgAdvancedGroup.check(advanceId);
+//    }
 
     private void normalCheck(int position) {
         int normalId;
@@ -140,10 +141,10 @@ public class BeautyDefaultFaceSettingView extends LinearLayout {
         LayoutInflater.from(mContext).inflate(R.layout.alivc_beauty_default, this);
 
         mRgNormalGroup = findViewById(R.id.beauty_normal_group);
-        mRgAdvancedGroup = findViewById(R.id.beauty_advanced_group);
+      //  mRgAdvancedGroup = findViewById(R.id.beauty_advanced_group);
         mBtBeautyDetail = findViewById(R.id.iv_beauty_detail);
 
-        alivcPopupView = new AlivcPopupView(mContext);
+        alivcPopupView  = new AlivcPopupView(mContext);
         TextView textView = new TextView(getContext());
         textView.setLayoutParams(new FrameLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT));
 
@@ -170,15 +171,15 @@ public class BeautyDefaultFaceSettingView extends LinearLayout {
             }
         });
 
-        mRgAdvancedGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                checkedPosition(checkedId);
-                if (mListener != null) {
-                    mListener.onAdvancedSelected(advancedPosition, beautyLevel);
-                }
-            }
-        });
+//        mRgAdvancedGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(RadioGroup group, int checkedId) {
+//                checkedPosition(checkedId);
+//                if (mListener != null) {
+//                    mListener.onAdvancedSelected(advancedPosition, beautyLevel);
+//                }
+//            }
+//        });
     }
 
     /**
@@ -197,33 +198,32 @@ public class BeautyDefaultFaceSettingView extends LinearLayout {
 
     private void checkedPosition(int checkedId) {
 
-        if (checkedId == R.id.beauty0 || checkedId == R.id.beauty_advanced_0) {
+        if (checkedId == R.id.beauty0 /*|| checkedId == R.id.beauty_advanced_0*/) {
             normalPosition = 0;
-            advancedPosition = 0;
+           // advancedPosition = 0;
             beautyLevel = BeautyLevel.BEAUTY_LEVEL_ZERO;
-        } else if (checkedId == R.id.beauty1 || checkedId == R.id.beauty_advanced_1) {
+        } else if (checkedId == R.id.beauty1 /*|| checkedId == R.id.beauty_advanced_1*/) {
             normalPosition = 1;
-            advancedPosition = 1;
+          //  advancedPosition = 1;
             beautyLevel = BeautyLevel.BEAUTY_LEVEL_ONE;
-        } else if (checkedId == R.id.beauty2 || checkedId == R.id.beauty_advanced_2) {
+        } else if (checkedId == R.id.beauty2 /*|| checkedId == R.id.beauty_advanced_2*/) {
             normalPosition = 2;
-            advancedPosition = 2;
+           // advancedPosition = 2;
             beautyLevel = BeautyLevel.BEAUTY_LEVEL_TWO;
-        } else if (checkedId == R.id.beauty3 || checkedId == R.id.beauty_advanced_3) {
+        } else if (checkedId == R.id.beauty3 /*|| checkedId == R.id.beauty_advanced_3*/) {
             normalPosition = 3;
-            advancedPosition = 3;
+           // advancedPosition = 3;
             beautyLevel = BeautyLevel.BEAUTY_LEVEL_THREE;
-        } else if (checkedId == R.id.beauty4 || checkedId == R.id.beauty_advanced_4) {
+        } else if (checkedId == R.id.beauty4 /*|| checkedId == R.id.beauty_advanced_4*/) {
             normalPosition = 4;
-            advancedPosition = 4;
+           // advancedPosition = 4;
             beautyLevel = BeautyLevel.BEAUTY_LEVEL_FOUR;
-        } else if (checkedId == R.id.beauty5 || checkedId == R.id.beauty_advanced_5) {
+        } else if (checkedId == R.id.beauty5 /*|| checkedId == R.id.beauty_advanced_5*/) {
             normalPosition = 5;
-            advancedPosition = 5;
+           // advancedPosition = 5;
             beautyLevel = BeautyLevel.BEAUTY_LEVEL_FIVE;
         }
     }
-
     /**
      * 详情按钮点击监听
      */
@@ -242,9 +242,10 @@ public class BeautyDefaultFaceSettingView extends LinearLayout {
         mListener = listener;
         if (beautyMode == BeautyMode.Normal) {
             checkedPosition(normalPosition);
-        } else if (beautyMode == BeautyMode.Advanced) {
-            checkedPosition(advancedPosition);
         }
+//        else if (beautyMode == BeautyMode.Advanced) {
+//            checkedPosition(advancedPosition);
+//        }
     }
 
     /**
@@ -273,16 +274,17 @@ public class BeautyDefaultFaceSettingView extends LinearLayout {
         this.beautyMode = beautyMode;
         if (beautyMode == BeautyMode.Normal) {
             mRgNormalGroup.setVisibility(VISIBLE);
-            mRgAdvancedGroup.setVisibility(GONE);
+           // mRgAdvancedGroup.setVisibility(GONE);
             if (isBeautyFace) {
                 if (beautyMap != null) {
                     normalPosition = beautyMap.get("normal") == null ? 3 : beautyMap.get("normal");
                     normalCheck(normalPosition);
                 }
             }
-        } else if (beautyMode == BeautyMode.Advanced) {
-            mRgNormalGroup.setVisibility(GONE);
-            mRgAdvancedGroup.setVisibility(VISIBLE);
         }
+//        else if (beautyMode == BeautyMode.Advanced) {
+//            mRgNormalGroup.setVisibility(GONE);
+//            mRgAdvancedGroup.setVisibility(VISIBLE);
+//        }
     }
 }

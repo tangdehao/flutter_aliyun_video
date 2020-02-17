@@ -230,7 +230,7 @@ public class AliyunSVideoRecordView extends FrameLayout
     /**
      * 当前美颜模式
      */
-    private BeautyMode currentBeautyFaceMode = BeautyMode.Advanced;
+    private BeautyMode currentBeautyFaceMode = BeautyMode.Normal;
     public static final int TYPE_FILTER = 1;
     public static final int TYPE_MUSIC = 3;
     private LinkedHashMap<Integer, Object> mConflictEffects = new LinkedHashMap<>();
@@ -1077,14 +1077,15 @@ public class AliyunSVideoRecordView extends FrameLayout
             public void onModeChange(RadioGroup group, int checkedId) {
 
                 BeautyParams beautyParams = null;
-                if (checkedId == R.id.rb_level_advanced) {
-                    currentBeautyFaceMode = BeautyMode.Advanced;
-                    recorder.setBeautyStatus(false);
-                    beautyParams = rememberParamList.get(currentBeautyFacePosition);
-                    if (beautyService != null) {
-                        beautyService.setBeautyParam(beautyParams, BeautyService.BEAUTY_FACE);
-                    }
-                } else if (checkedId == R.id.rb_level_normal) {
+//                if (checkedId == R.id.rb_level_advanced) {
+//                    currentBeautyFaceMode = BeautyMode.Advanced;
+//                    recorder.setBeautyStatus(false);
+//                    beautyParams = rememberParamList.get(currentBeautyFacePosition);
+//                    if (beautyService != null) {
+//                        beautyService.setBeautyParam(beautyParams, BeautyService.BEAUTY_FACE);
+//                    }
+//                } else
+                if (checkedId == R.id.rb_level_normal) {
                     currentBeautyFaceMode = BeautyMode.Normal;
                     recorder.setBeautyStatus(true);
                     recorder.setBeautyLevel(defaultBeautyLevel.getValue());
@@ -1509,7 +1510,9 @@ public class AliyunSVideoRecordView extends FrameLayout
 
                 //******************************** start ******************************************
                 //这块代码会影响到标准版的faceUnity功能 改动的时候要关联app gradle 一起改动
-                if (faceInitResult && currentBeautyFaceMode == BeautyMode.Advanced && faceUnityManager != null) {
+                ///Normal
+//                if (faceInitResult && currentBeautyFaceMode == BeautyMode.Adv && faceUnityManager != null) {
+                if (faceInitResult && currentBeautyFaceMode == BeautyMode.Normal && faceUnityManager != null) {
                     /**
                      * faceInitResult fix bug:反复退出进入会出现黑屏情况,原因是因为release之后还在调用渲染的接口,必须要保证release了之后不能再调用渲染接口
                      */
@@ -1549,11 +1552,12 @@ public class AliyunSVideoRecordView extends FrameLayout
      */
     private void faceunityDefaultParam() {
         beautyService = new BeautyService();
-        if (BeautyMode.Advanced == currentBeautyFaceMode) {
-            recorder.setBeautyStatus(false);
-            beautyService.bindFaceUnity(getContext(), faceUnityManager);
-
-        } else if (BeautyMode.Normal == currentBeautyFaceMode) {
+//        if (BeautyMode.Advanced == currentBeautyFaceMode) {
+//            recorder.setBeautyStatus(false);
+//            beautyService.bindFaceUnity(getContext(), faceUnityManager);
+//
+//        } else
+            if (BeautyMode.Normal == currentBeautyFaceMode) {
             //普通美颜等级
             int beautyNormalFaceLevel = SharedPreferenceUtils.getBeautyNormalFaceLevel(getContext());
             recorder.setBeautyStatus(true);

@@ -12,7 +12,7 @@ public enum BeautyMode {
     /**
      * 高级
      */
-    Advanced(1),
+   // Advanced(1),
 
     /**
      * 美肌

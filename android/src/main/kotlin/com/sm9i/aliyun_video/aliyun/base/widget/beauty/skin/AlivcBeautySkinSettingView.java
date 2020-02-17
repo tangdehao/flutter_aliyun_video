@@ -38,9 +38,9 @@ public class AlivcBeautySkinSettingView extends FrameLayout {
     private BeautyDetailSettingView mDetailSettingView;
     private BeautyParams mParams;
     private TextView tvCopyright;
-    private RadioButton rbNormalLevel;
-    private RadioButton rbHeighLevel;
-    private BeautyMode mBeautyMode = BeautyMode.Advanced;
+//    private RadioButton rbNormalLevel;
+//    private RadioButton rbHeighLevel;
+    private BeautyMode mBeautyMode = BeautyMode.Normal;
 
 
     /**
@@ -80,8 +80,8 @@ public class AlivcBeautySkinSettingView extends FrameLayout {
         tvCopyright = findViewById(R.id.tv_copyright);
         tvCopyright.setMovementMethod(LinkMovementMethod.getInstance());
         tvCopyright.setText(getClickableSpan());
-        rbNormalLevel = findViewById(R.id.rb_level_normal);
-        rbHeighLevel = findViewById(R.id.rb_level_advanced);
+//        rbNormalLevel = findViewById(R.id.rb_level_normal);
+//        rbHeighLevel = findViewById(R.id.rb_level_advanced);
 
         mBeautySkinSettingView.setItemSelectedListener(new OnBeautySkinItemSeletedListener() {
             @Override

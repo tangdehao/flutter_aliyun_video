@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="5383e202-7e2b-45f7-b13b-aaac979841c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/enums/BeautyMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/enums/BeautyMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/face/AlivcBeautyFaceSettingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/face/AlivcBeautyFaceSettingView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/face/BeautyDefaultFaceSettingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/face/BeautyDefaultFaceSettingView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/skin/AlivcBeautySkinSettingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/skin/AlivcBeautySkinSettingView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/util/SharedPreferenceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/util/SharedPreferenceUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/AliyunSVideoRecordView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/AliyunSVideoRecordView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/effects/face/AlivcBeautyFaceFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/effects/face/AlivcBeautyFaceFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/alivc_beauty_default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_beauty_default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/alivc_beauty_face_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_beauty_face_layout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/AliyunSVideoRecordView.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/AliyunSVideoRecordView.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -41,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+            <state relative-caret-position="41">
+              <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -117,8 +123,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="69" />
-    <option name="y" value="88" />
+    <option name="x" value="41" />
+    <option name="y" value="65" />
     <option name="width" value="1285" />
     <option name="height" value="793" />
   </component>
@@ -182,10 +188,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="69" y="88" width="1285" height="793" extended-state="0" />
+    <frame x="68" y="65" width="1285" height="793" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4473049" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.4473049" />
       <window_info id="Captures" order="1" side_tool="true" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -195,12 +201,12 @@
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Dart Analysis" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" weight="0.42920354" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.42920354" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="4" weight="0.2742857" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.5042857" />
-      <window_info anchor="bottom" id="Terminal" order="6" visible="true" weight="0.4498525" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.4498525" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Find" order="9" />
@@ -423,8 +429,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+        <state relative-caret-position="41">
+          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
         </state>
       </provider>
     </entry>

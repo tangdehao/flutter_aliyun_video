@@ -10,8 +10,8 @@
         android:id="@+id/blank_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
         android:layout_gravity="bottom"
+        android:layout_weight="1"
         android:background="#00000000">
 
         <com.sm9i.aliyun_video.aliyun.base.widget.beauty.face.BeautyDefaultFaceSettingView
@@ -21,28 +21,37 @@
             android:layout_gravity="bottom" />
     </FrameLayout>
 
-    <RadioGroup
-        android:id="@+id/rg_beauty_mode"
+    <TextView
+        android:id="@+id/rb_level_normal"
+        style="@style/BeautyChangeTabStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/alivc_common_margin_30"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingTop="@dimen/alivc_common_padding_4"
-        android:paddingBottom="@dimen/alivc_common_padding_6"
-        >
+        android:text="@string/alivc_base_beauty_level_normal" />
 
-        <RadioButton
-            android:id="@+id/rb_level_advanced"
-            android:text="@string/alivc_base_beauty_level_advanced"
-            android:layout_marginEnd="@dimen/alivc_common_margin_30"
-            style="@style/BeautyChangeTabStyle"
-            android:layout_marginRight="@dimen/alivc_common_margin_30" />
+    <!--    <RadioGroup-->
+    <!--        android:id="@+id/rg_beauty_mode"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:paddingTop="@dimen/alivc_common_padding_4"-->
+    <!--        android:paddingBottom="@dimen/alivc_common_padding_6"-->
+    <!--        >-->
 
-        <RadioButton
-            android:id="@+id/rb_level_normal"
-            android:text="@string/alivc_base_beauty_level_normal"
-            android:layout_marginStart="@dimen/alivc_common_margin_30"
-            style="@style/BeautyChangeTabStyle"
-            android:layout_marginLeft="@dimen/alivc_common_margin_30" />
-    </RadioGroup>
+    <!--&lt;!&ndash;        <RadioButton&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/rb_level_advanced"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:text="@string/alivc_base_beauty_level_advanced"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_marginEnd="@dimen/alivc_common_margin_30"&ndash;&gt;-->
+    <!--&lt;!&ndash;            style="@style/BeautyChangeTabStyle"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_marginRight="@dimen/alivc_common_margin_30" />&ndash;&gt;-->
+
+    <!--        <RadioButton-->
+    <!--            android:id="@+id/rb_level_normal"-->
+    <!--            android:text="@string/alivc_base_beauty_level_normal"-->
+    <!--            android:layout_marginStart="@dimen/alivc_common_margin_30"-->
+    <!--            style="@style/BeautyChangeTabStyle"-->
+    <!--            android:layout_marginLeft="@dimen/alivc_common_margin_30" />-->
+    <!--    </RadioGroup>-->
 </LinearLayout>

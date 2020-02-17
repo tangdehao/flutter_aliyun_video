@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -42,10 +43,10 @@ public class AlivcBeautyFaceSettingView extends FrameLayout {
     private BeautyDefaultFaceSettingView mDefaultSettingView;
     private BeautyDetailSettingView mDetailSettingView;
     private BeautyParams mParams;
-    private RadioGroup rgBeautyModeCheck;
-    private RadioButton rbNormalLevel;
-    private RadioButton rbHeighLevel;
-    private BeautyMode mBeautyMode = BeautyMode.Advanced;
+    //    private RadioGroup rgBeautyModeCheck;
+    private TextView rbNormalLevel;
+    //    private RadioButton rbHeighLevel;
+    private BeautyMode mBeautyMode = BeautyMode.Normal;
 
     /**
      * 底部tab的下标控制
@@ -102,12 +103,12 @@ public class AlivcBeautyFaceSettingView extends FrameLayout {
     private void initView() {
         LayoutInflater.from(mContext).inflate(R.layout.alivc_beauty_face_layout, this);
         mDefaultSettingView = findViewById(R.id.default_face_setting);
-        rgBeautyModeCheck = findViewById(R.id.rg_beauty_mode);
+//        rgBeautyModeCheck = findViewById(R.id.rg_beauty_mode);
         rbNormalLevel = findViewById(R.id.rb_level_normal);
-        rbHeighLevel = findViewById(R.id.rb_level_advanced);
+//        rbHeighLevel = findViewById(R.id.rb_level_advanced);
         // 默认选中高级美颜
         bottomTabChange(BOTTOM_TAB_INDEX_HEIGH);
-        mDefaultSettingView.setBeautyMode(BeautyMode.Advanced, true);
+        mDefaultSettingView.setBeautyMode(BeautyMode.Normal, true);
 
         mDefaultSettingView.setItemSelectedListener(new OnBeautyFaceItemSeletedListener() {
             @Override
@@ -152,28 +153,27 @@ public class AlivcBeautyFaceSettingView extends FrameLayout {
             }
         });
 
-        rgBeautyModeCheck.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                if (onBeautyModeChangeListener != null) {
-                    onBeautyModeChangeListener.onModeChange(group, checkedId);
-                }
-
-                if (checkedId == R.id.rb_level_advanced) {
-                    ///隐藏了高级
+//        rgBeautyModeCheck.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(RadioGroup group, int checkedId) {
+//
+//                if (onBeautyModeChangeListener != null) {
+//                    onBeautyModeChangeListener.onModeChange(group, checkedId);
+//                }
+//
+//                if (checkedId == R.id.rb_level_advanced) {
 //                    mDefaultSettingView.showDetailBtn();
-                    bottomTabIndex = BOTTOM_TAB_INDEX_HEIGH;
-                    mDefaultSettingView.setBeautyMode(BeautyMode.Advanced, true);
-                } else if (checkedId == R.id.rb_level_normal) {
+//                    bottomTabIndex = BOTTOM_TAB_INDEX_HEIGH;
+//                    mDefaultSettingView.setBeautyMode(BeautyMode.Advanced, true);
+//                } else if (checkedId == R.id.rb_level_normal) {
 //                    mDefaultSettingView.hideDetailBtn();
-                    mDefaultSettingView.setBeautyMode(BeautyMode.Normal, true);
-                    bottomTabIndex = BOTTOM_TAB_INDEX_NORMAL;
-                }
-
-                bottomTabChange(bottomTabIndex);
-            }
-        });
+//                    mDefaultSettingView.setBeautyMode(BeautyMode.Normal, true);
+//                    bottomTabIndex = BOTTOM_TAB_INDEX_NORMAL;
+//                }
+//
+//                bottomTabChange(bottomTabIndex);
+//            }
+//        });
 
     }
 
@@ -194,11 +194,11 @@ public class AlivcBeautyFaceSettingView extends FrameLayout {
         transparent.setBounds(0, 0, arrowdrawable.getMinimumWidth(), arrowdrawable.getMinimumHeight());
 
         if (tabIndex == BOTTOM_TAB_INDEX_NORMAL) {
-            rbHeighLevel.setCompoundDrawables(null, null, null, transparent);
+            //  rbHeighLevel.setCompoundDrawables(null, null, null, transparent);
             rbNormalLevel.setCompoundDrawables(null, null, null, arrowdrawable);
         } else if (tabIndex == BOTTOM_TAB_INDEX_HEIGH) {
             rbNormalLevel.setCompoundDrawables(null, null, null, transparent);
-            rbHeighLevel.setCompoundDrawables(null, null, null, arrowdrawable);
+            //rbHeighLevel.setCompoundDrawables(null, null, null, arrowdrawable);
         }
         if (mDefaultSettingView != null) {
             mDefaultSettingView.setDefaultSelect(defaultMap);
@@ -258,7 +258,7 @@ public class AlivcBeautyFaceSettingView extends FrameLayout {
 
     public void setRadioChecked(int checkId) {
 
-        rgBeautyModeCheck.check(checkId);
+//        rgBeautyModeCheck.check(checkId);
     }
 
     public void setOnBeautyDetailClickListener(
