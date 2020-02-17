@@ -24,6 +24,7 @@ import java.util.Map;
 
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
+///美颜dialog
 public class BeautyDefaultFaceSettingView extends LinearLayout {
     private Context mContext;
     private RadioGroup mRgNormalGroup;
@@ -142,7 +143,7 @@ public class BeautyDefaultFaceSettingView extends LinearLayout {
         mRgAdvancedGroup = findViewById(R.id.beauty_advanced_group);
         mBtBeautyDetail = findViewById(R.id.iv_beauty_detail);
 
-        alivcPopupView  = new AlivcPopupView(mContext);
+        alivcPopupView = new AlivcPopupView(mContext);
         TextView textView = new TextView(getContext());
         textView.setLayoutParams(new FrameLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT));
 
@@ -222,6 +223,7 @@ public class BeautyDefaultFaceSettingView extends LinearLayout {
             beautyLevel = BeautyLevel.BEAUTY_LEVEL_FIVE;
         }
     }
+
     /**
      * 详情按钮点击监听
      */

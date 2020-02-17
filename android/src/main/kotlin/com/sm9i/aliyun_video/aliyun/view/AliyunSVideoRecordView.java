@@ -1813,6 +1813,7 @@ public class AliyunSVideoRecordView extends FrameLayout
         mOutputInfo.setVideoWidth(recorder.getVideoWidth());
         mOutputInfo.setVideoHeight(recorder.getVideoHeight());
         mOutputInfo.setVideoCodec(mVideoCodec);
+
         recorder.setMediaInfo(mMixInputInfo, mOutputInfo);
     }
 

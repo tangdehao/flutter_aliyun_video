@@ -11,6 +11,7 @@
         android:id="@+id/iv_beauty_detail"
         android:layout_width="@dimen/alivc_common_size_icon_24"
         android:layout_height="@dimen/alivc_common_size_icon_24"
+        android:visibility="gone"
         android:layout_gravity="center_vertical|right"
         android:layout_marginEnd="@dimen/alivc_common_margin_16"
         android:layout_marginRight="@dimen/alivc_common_margin_16"
@@ -86,7 +87,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:orientation="horizontal"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <RadioButton
                 android:id="@+id/beauty_advanced_0"

@@ -161,11 +161,12 @@ public class AlivcBeautyFaceSettingView extends FrameLayout {
                 }
 
                 if (checkedId == R.id.rb_level_advanced) {
-                    mDefaultSettingView.showDetailBtn();
+                    ///隐藏了高级
+//                    mDefaultSettingView.showDetailBtn();
                     bottomTabIndex = BOTTOM_TAB_INDEX_HEIGH;
                     mDefaultSettingView.setBeautyMode(BeautyMode.Advanced, true);
                 } else if (checkedId == R.id.rb_level_normal) {
-                    mDefaultSettingView.hideDetailBtn();
+//                    mDefaultSettingView.hideDetailBtn();
                     mDefaultSettingView.setBeautyMode(BeautyMode.Normal, true);
                     bottomTabIndex = BOTTOM_TAB_INDEX_NORMAL;
                 }
@@ -261,7 +262,7 @@ public class AlivcBeautyFaceSettingView extends FrameLayout {
     }
 
     public void setOnBeautyDetailClickListener(
-        OnBeautyDetailClickListener onBeautyDetailClickListener) {
+            OnBeautyDetailClickListener onBeautyDetailClickListener) {
         this.onBeautyDetailClickListener = onBeautyDetailClickListener;
     }
 
@@ -285,8 +286,8 @@ public class AlivcBeautyFaceSettingView extends FrameLayout {
             }
         }, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         spannableString.setSpan(
-            new ForegroundColorSpan(getContext().getResources().getColor(R.color.alivc_svideo_bg_balloon_tip_cyan)), start,
-            end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                new ForegroundColorSpan(getContext().getResources().getColor(R.color.alivc_svideo_bg_balloon_tip_cyan)), start,
+                end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         return spannableString;
     }
 
