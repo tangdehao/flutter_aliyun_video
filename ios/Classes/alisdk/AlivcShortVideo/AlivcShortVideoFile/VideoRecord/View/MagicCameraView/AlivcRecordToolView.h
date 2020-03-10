@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 typedef NS_ENUM(NSInteger, AlivcRecordButtonTouchMode){
     AlivcRecordButtonTouchModeClick = 0,
-    AlivcRecordButtonTouchModeLongPress
+    AlivcRecordButtonTouchModeLongPress = 1
 };
 
 @protocol AlivcRecordToolViewDelegate <NSObject>
@@ -60,6 +60,8 @@ typedef NS_ENUM(NSInteger, AlivcRecordButtonTouchMode){
  @param show 是否显示
  */
 - (void)showDeleteButton:(BOOL)show;
+
+- (void)hideMixButton;
 
 @end
 NS_ASSUME_NONNULL_END

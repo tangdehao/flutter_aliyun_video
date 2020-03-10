@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'aliyun_video'
-  s.version          = '0.0.1'
+  s.version          = '0.1.0'
   s.summary          = 'A new flutter plugin project.'
   s.description      = <<-DESC
 A new flutter plugin project.
@@ -41,6 +41,7 @@ A new flutter plugin project.
   s.dependency 'UMCCommon'
   s.dependency 'UMCAnalytics'
   s.dependency 'Nama-lite'
+  s.vendored_frameworks = 'Framework/*.framework'
 
 
   # Flutter.framework does not contain a i386 slice. Only x86_64 simulators are supported.

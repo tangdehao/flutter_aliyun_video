@@ -11,6 +11,8 @@
 #import "AlivcRecordToolView.h"
 
 
+typedef void (^AlivcRecordFinishDictBlock)(NSDictionary *outputPath);
+
 @class AliyunClipManager;
 @class AliyunIRecorder;
  
@@ -32,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  拍摄完成的回调
  */
-@property (nonatomic, copy, nullable) AlivcRecordFinishBlock finishBlock;
+@property (nonatomic, copy, nullable) AlivcRecordFinishDictBlock finishBlock;
 
 @property (nonatomic, assign)BOOL isMixedViedo;//是否是合拍的视频
 

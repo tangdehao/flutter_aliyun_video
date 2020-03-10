@@ -69,7 +69,7 @@ class _MyAppState extends State<MyApp> {
                     checkPermission();
                   }
                 },
-                child: Text('take'),
+                child: Text('take Cooperation'),
               ),
               RaisedButton(
                 onPressed: () async {

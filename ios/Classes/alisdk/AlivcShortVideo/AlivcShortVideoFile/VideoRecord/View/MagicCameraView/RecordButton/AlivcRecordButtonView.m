@@ -22,7 +22,7 @@ static CGFloat AlivcRecordTimeLabelWidth = 48;//录制时间lab宽度
 @implementation AlivcRecordButtonView
 {
     BOOL _isRecording;
-    UILabel *_timeLab;
+//    UILabel *_timeLab;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame{

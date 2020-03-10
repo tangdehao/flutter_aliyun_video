@@ -35,6 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong)AlivcRecordButton *recordBtn;//录制按钮
 
+@property(nonatomic, strong)UILabel *timeLab;//计时
+
 /**
  更新录制按钮状态
 

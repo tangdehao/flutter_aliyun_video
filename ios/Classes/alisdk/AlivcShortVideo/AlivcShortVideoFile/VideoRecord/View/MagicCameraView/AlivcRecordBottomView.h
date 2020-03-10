@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AlivcRecordToolView.h"
+#import "AlivcRecordRateSelectView.h"
+#import "AlivcRecordButtonView.h"
+
 @class AlivcRecordUIConfig;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -56,6 +59,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)alivcRecordBottomViewEffectButtonOnclick;
 
+/**
+ 切换视频/照片
+ */
+- (void)alivcRecordBottomViewChangeTouchMode:(AlivcRecordButtonTouchMode *)mode;
+
 @end
 
 @interface AlivcRecordBottomView : UIView
@@ -64,8 +72,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong)AlivcRecordToolView *toolView;
 
+@property(nonatomic, strong)AlivcRecordRateSelectView *rateSelectView;
+
 //初始化拍摄模式-baan
 @property(nonatomic, assign)AlivcRecordButtonTouchMode touchMode;
+
+@property(nonatomic, strong)AlivcRecordButtonView *recordButttonView;
 /**
  初始化实例
 

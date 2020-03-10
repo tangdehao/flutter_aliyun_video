@@ -159,6 +159,17 @@ AlivcRecordPasterViewDelegate>
 //    [self.view addSubview:self.sliderButtonsView];
     //添加底部view
     [self.view addSubview:self.bottomView];
+    if (self.touchMode == AlivcRecordButtonTouchModeClick) {
+        self.progressView.hidden = false;
+        self.bottomView.rateSelectView.hidden = false;
+    }else {
+        self.progressView.hidden = true;
+        self.bottomView.rateSelectView.hidden = true;
+    }
+    if (!self.finishBlock) {
+        //隐藏照片,视频文字
+        [self.bottomView.toolView hideMixButton];
+    }
 }
 // 监听通知
 - (void)addNotification
@@ -404,7 +415,7 @@ AlivcRecordPasterViewDelegate>
         {
             [self.recorder stopPreview];
             #if SDK_VERSION == SDK_VERSION_CUSTOM
-            [[AlivcShortVideoFaceUnityManager shareManager] destoryItems];
+//            [[AlivcShortVideoFaceUnityManager shareManager] destoryItems];
             #endif
             [self backToFlutter];
             
@@ -527,6 +538,20 @@ AlivcRecordPasterViewDelegate>
     [self.progressView updateProgress:[self duration]];
     [self updateViewsStatus];
 }
+
+- (void)alivcRecordBottomViewChangeTouchMode:(AlivcRecordButtonTouchMode *)mode {
+    self.touchMode = mode;
+    if (mode == AlivcRecordButtonTouchModeClick) {
+        self.progressView.hidden = false;
+        self.bottomView.rateSelectView.hidden = false;
+        self.bottomView.recordButttonView.timeLab.hidden = false;
+    }else {
+        self.progressView.hidden = true;
+        self.bottomView.rateSelectView.hidden = true;
+        self.bottomView.recordButttonView.timeLab.hidden = true;
+    }
+}
+
 - (BOOL)alivcRecordBottomViewStartRecord{
 //    if (_stopRecordActionUnfinished) {
 //        NSLog(@"有停止录制动作未完成");
@@ -582,7 +607,9 @@ AlivcRecordPasterViewDelegate>
                     if (contentEditingInput.fullSizeImageURL) {
                         NSString *path = [contentEditingInput.fullSizeImageURL relativePath];
                         if (weakSelf.finishBlock) {
-                            weakSelf.finishBlock(path);
+                            NSString *type = [NSString stringWithFormat:@"%ld", weakSelf.touchMode];
+                            NSDictionary *dict = @{@"filePath":path, @"fileType": type};
+                            weakSelf.finishBlock(dict);
                             [weakSelf backToFlutter];
                         }
                     }
@@ -696,7 +723,9 @@ AlivcRecordPasterViewDelegate>
     //跳转处理
     NSString *outputPath = self.recorder.outputPath;
     if (self.finishBlock) {
-        self.finishBlock(outputPath);
+        NSString *type = [NSString stringWithFormat:@"%ld", self.touchMode];
+        NSDictionary *dict = @{@"filePath":outputPath, @"fileType": type};
+        self.finishBlock(dict);
         [self backToFlutter];
     }else{
         [[AlivcShortVideoRoute shared]registerEditVideoPath:outputPath];
@@ -709,6 +738,7 @@ AlivcRecordPasterViewDelegate>
         }
         [[AlivcShortVideoRoute shared] registerIsMixedVideo:self.isMixedViedo];
         UIViewController *editVC = [[AlivcShortVideoRoute shared]alivcViewControllerWithType:AlivcViewControlEdit];
+        //baan
         [self.navigationController pushViewController:editVC animated:YES];
     }
     [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -733,22 +763,22 @@ AlivcRecordPasterViewDelegate>
 }
 // 集成faceunity
 #if SDK_VERSION == SDK_VERSION_CUSTOM
-- (CVPixelBufferRef)customRenderedPixelBufferWithRawSampleBuffer:(CMSampleBufferRef)sampleBuffer {
-    if (self.beautyView.currentBeautyType == AlivcBeautySettingViewStyle_ShortVideo_BeautyFace_Base) {
-        return CMSampleBufferGetImageBuffer(sampleBuffer);
-    }
-    //注意这里美颜美肌的参数是分开的beautyParams和beautySkinParams
-    //美颜参数设置(这里用的是beautyParams)
-    CGFloat beautyWhite = self.beautyView.beautyParams.beautyWhite;
-    CGFloat beautyBuffing = self.beautyView.beautyParams.beautyBuffing;
-    CGFloat beautyRuddy = self.beautyView.beautyParams.beautyRuddy;
-    //美肌参数设置(这里用的是beautySkinParams)
-    CGFloat beautyBigEye = self.beautyView.beautySkinParams.beautyBigEye;
-    CGFloat beautySlimFace = self.beautyView.beautySkinParams.beautySlimFace;
-    
-    CVPixelBufferRef buf = [[AlivcShortVideoFaceUnityManager shareManager] RenderedPixelBufferWithRawSampleBuffer:sampleBuffer beautyWhiteValue:beautyWhite/100.0 blurValue:beautyBuffing/100.0 bigEyeValue:beautyBigEye/100.0 slimFaceValue:beautySlimFace/100.0 buddyValue:beautyRuddy/100.0];
-    return buf;
-}
+//- (CVPixelBufferRef)customRenderedPixelBufferWithRawSampleBuffer:(CMSampleBufferRef)sampleBuffer {
+//    if (self.beautyView.currentBeautyType == AlivcBeautySettingViewStyle_ShortVideo_BeautyFace_Base) {
+//        return CMSampleBufferGetImageBuffer(sampleBuffer);
+//    }
+//    //注意这里美颜美肌的参数是分开的beautyParams和beautySkinParams
+//    //美颜参数设置(这里用的是beautyParams)
+//    CGFloat beautyWhite = self.beautyView.beautyParams.beautyWhite;
+//    CGFloat beautyBuffing = self.beautyView.beautyParams.beautyBuffing;
+//    CGFloat beautyRuddy = self.beautyView.beautyParams.beautyRuddy;
+//    //美肌参数设置(这里用的是beautySkinParams)
+//    CGFloat beautyBigEye = self.beautyView.beautySkinParams.beautyBigEye;
+//    CGFloat beautySlimFace = self.beautyView.beautySkinParams.beautySlimFace;
+//
+//    CVPixelBufferRef buf = [[AlivcShortVideoFaceUnityManager shareManager] RenderedPixelBufferWithRawSampleBuffer:sampleBuffer beautyWhiteValue:beautyWhite/100.0 blurValue:beautyBuffing/100.0 bigEyeValue:beautyBigEye/100.0 slimFaceValue:beautySlimFace/100.0 buddyValue:beautyRuddy/100.0];
+//    return buf;
+//}
 #endif
 
 #pragma mark - 动图数据相关 -
@@ -940,7 +970,7 @@ AlivcRecordPasterViewDelegate>
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 #if SDK_VERSION == SDK_VERSION_CUSTOM
 
-    [[AlivcShortVideoFaceUnityManager shareManager] destoryItems];
+//    [[AlivcShortVideoFaceUnityManager shareManager] destoryItems];baan
 #endif
 }
 

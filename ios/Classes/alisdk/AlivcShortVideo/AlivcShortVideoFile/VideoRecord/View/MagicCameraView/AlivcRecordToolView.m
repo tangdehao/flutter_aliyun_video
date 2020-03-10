@@ -228,5 +228,12 @@
     
 }
 
+- (void)hideMixButton {
+    _holdBtn.hidden = true;
+    _clickBtn.hidden = true;
+    _holdBtn.userInteractionEnabled = false;
+    _clickBtn.userInteractionEnabled = false;
+}
+
 
 @end

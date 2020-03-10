@@ -17,7 +17,7 @@
     }
     return self;
 }
-
+//baan 删除 字幕 mv 特效
 - (void)setDefaultValue{
     self.backgroundColor = [UIColor blackColor];
     self.backImage = [UIImage imageNamed:@"avcBackIcon"];

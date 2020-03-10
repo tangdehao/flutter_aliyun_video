@@ -7,10 +7,8 @@
 //
 
 #import "AlivcRecordBottomView.h"
-#import "AlivcRecordRateSelectView.h"
 #import "AlivcRecordUIConfig.h"
 #import "AlivcRecordToolView.h"
-#import "AlivcRecordButtonView.h"
 #import "AlivcButton.h"
 #import "NSString+AlivcHelper.h"
 
@@ -20,9 +18,9 @@
 
 @property(nonatomic, strong)AlivcButton *pasterBtn;
 
-@property(nonatomic, strong)AlivcRecordButtonView *recordButttonView;
 
-@property(nonatomic, strong)AlivcRecordRateSelectView *rateSelectView;
+
+
 
 @end
 
@@ -85,6 +83,9 @@
 
 #pragma mark - Actions
 - (void)updateUI{
+    if (_toolView.touchMode == AlivcRecordButtonTouchModeLongPress) {
+        return;
+    }
     BOOL isRecording =[self isRecording];
     [_beautyBtn setHidden:isRecording];
     [_pasterBtn setHidden:isRecording];
@@ -141,6 +142,9 @@
 #pragma mark - AlivcRecordToolViewDelegate
 - (void)alivcRecordToolViewSwitchTouchMode:(AlivcRecordButtonTouchMode)touchMode{
     [_recordButttonView switchShowRecordButtonTip:(touchMode==AlivcRecordButtonTouchModeLongPress && ![self isRecording])];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(alivcRecordBottomViewChangeTouchMode:)]) {
+        [self.delegate alivcRecordBottomViewChangeTouchMode:touchMode];
+    }
 }
 - (void)alivcRecordToolViewDeleteVideoPart{
     if (self.delegate && [self.delegate respondsToSelector:@selector(alivcRecordBottomViewDeleteVideoPart)]) {

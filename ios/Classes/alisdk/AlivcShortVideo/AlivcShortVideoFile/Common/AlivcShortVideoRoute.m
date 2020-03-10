@@ -48,7 +48,7 @@ static AlivcShortVideoRoute *_instance = nil;
     dispatch_once(&onceToken, ^{
         if (!_instance) {
             _instance = [super allocWithZone:zone];
-            [AlivcImage setImageBundleName:@"AlivcShortVideoImage"];
+//            [AlivcImage setImageBundleName:@"AlivcShortVideoImage"];
             [AliyunIConfig setConfig:[[AliyunIConfig alloc]init]];//注册功能配置类
             [[[AliyunEffectPrestoreManager alloc]init] insertInitialData];//初始化动图资源
         }
