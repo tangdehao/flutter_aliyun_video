@@ -15,6 +15,7 @@
 #import "AlivcShortVideoPublishManager.h"
 #import "AlivcDefine.h"
 #import "AliyunMediaConfig.h"
+#import "AliyunMagicCameraViewController.h"
 
 
 @interface AlivcPublishQuViewControl () <UITextFieldDelegate>
@@ -194,14 +195,11 @@
 - (UIButton *)retryButton {
     if (!_retryButton) {
         _retryButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _retryButton.backgroundColor = [UIColor colorWithHexString:@"FC4347"];
-        CGFloat width = 60;
-        CGFloat height = 28;
-        _retryButton.frame = CGRectMake(0, 0, width, height);
-        [_retryButton setTitle:NSLocalizedString(@"重拍" , nil) forState:UIControlStateNormal];
-        _retryButton.titleLabel.font = [UIFont systemFontOfSize:13];
-        _retryButton.layer.cornerRadius =  2;
-        _retryButton.clipsToBounds = YES;
+        CGFloat width = 40;
+        CGFloat height = 40;
+        _retryButton.frame = CGRectMake(10, 20, width, height);
+        UIImage *backImage = [AlivcImage imageNamed:@"avcBackIcon"];
+        [_retryButton setImage:backImage forState:UIControlStateNormal];
         [_retryButton addTarget:self
                            action:@selector(retry)
                  forControlEvents:UIControlEventTouchUpInside];
@@ -231,12 +229,13 @@
     
     [self.view addSubview:self.retryButton];
     self.retryButton.center =
-    CGPointMake(self.publishButton.frame.size.width / 2 + 8,
+    CGPointMake(20,
                 self.backButton.center.y);
+    
     
     //imageView
     UIImageView *imageView = [[UIImageView alloc] init];
-    CGFloat imageWidth = ScreenWidth / 5 * 3;
+    CGFloat imageWidth = ScreenWidth;
     CGFloat imageHeight = 0;
     if (self.coverImage) {
         imageHeight =
@@ -320,7 +319,11 @@
 
 //重拍
 - (void)retry {
-    [self.navigationController popToRootViewControllerAnimated:false];
+    for (UIViewController *temp in self.navigationController.viewControllers) {
+        if ([temp isKindOfClass:[AliyunMagicCameraViewController class]]) {
+            [self.navigationController popToViewController:temp animated:YES];
+        }
+    }
 }
 
 - (void)popToPlayVC{
@@ -406,8 +409,8 @@ static CGFloat knimationTime = 0.6;
     
     self.publishButton.hidden = isHide;
     self.backButton.hidden = isHide;
-    self.titleView.hidden = isHide;
-    self.lineView.hidden = isHide;
+//    self.titleView.hidden = isHide;
+//    self.lineView.hidden = isHide;
     self.retryButton.hidden = isHide;
 
 }

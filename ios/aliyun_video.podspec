@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'aliyun_video'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A new flutter plugin project.'
   s.description      = <<-DESC
 A new flutter plugin project.
@@ -21,6 +21,8 @@ A new flutter plugin project.
   s.platform = :ios, '8.0'
   
   s.static_framework = true
+  
+  s.prefix_header_contents = '#import <UIKit/UIKit.h>', '#import <Foundation/Foundation.h>', '#import "AlivcImage.h"', '#import "AlivcMacro.h"'
   
   s.dependency 'AliyunVideoSDKStd'
   s.dependency 'QuCore-ThirdParty'

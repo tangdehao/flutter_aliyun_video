@@ -17,7 +17,7 @@ PODS:
   - AlivcConan (1.0.2):
     - AlivcConan/AlivcConan (= 1.0.2)
   - AlivcConan/AlivcConan (1.0.2)
-  - aliyun_video (0.1.0):
+  - aliyun_video (0.1.1):
     - AFNetworking
     - AlivcConan
     - AliyunOSSiOS
@@ -136,7 +136,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   AlivcConan: df8627643b3794c329e4c8eb894428610be83e88
-  aliyun_video: bba44d0e057af40cbfc4b59dda8c3bbab7912efe
+  aliyun_video: bd778fd08ee9a39841fed94c30af28147223a938
   AliyunOSSiOS: 8db92936545593b9e5c66d680ef2ac0738946651
   AliyunVideoSDKStd: a03f23db435088e564baefb074ce2b70973f8992
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
