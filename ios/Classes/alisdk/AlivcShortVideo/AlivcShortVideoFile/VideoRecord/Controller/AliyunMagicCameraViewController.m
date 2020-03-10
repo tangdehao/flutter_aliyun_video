@@ -95,6 +95,9 @@ AlivcRecordPasterViewDelegate>
         [self.recorder startPreview];
         self.shouldStartPreviewWhenActive = NO;
     }
+    if (self.isMixedViedo) {
+        [_navigationBar setFinishButtonHidden:true];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -245,6 +248,9 @@ AlivcRecordPasterViewDelegate>
     [self.sliderButtonsView setMusicButtonEnabled:(self.recorderDuration == 0)];
     //更新底部录制view
     [self.bottomView setHidden:self.timerCountLab.isTiming];
+    if (self.isMixedViedo) {
+        [self.navigationBar setFinishButtonHidden:true];
+    }
 }
 //更新闪光灯按钮状态
 - (void)updateNavigationBarTorchModeStatus{

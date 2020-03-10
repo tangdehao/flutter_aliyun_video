@@ -91,6 +91,11 @@ static CGFloat AlivcRecordNavigationBarItemSpace = 30;//按钮间间隔
     }
 }
 
+- (void)setFinishButtonHidden:(BOOL)enabled {
+    UIButton *finishBtn = (UIButton *)[self viewWithTag:(NSInteger)AlivcRecordNavigationBarTypeFinish];
+    finishBtn.hidden = enabled;
+}
+
 - (void)setTimerButtonEnabled:(BOOL)enabled{
     UIButton *timerBtn = (UIButton *)[self viewWithTag:(NSInteger)AlivcRecordNavigationBarTypeTiming];
     timerBtn.enabled =enabled;

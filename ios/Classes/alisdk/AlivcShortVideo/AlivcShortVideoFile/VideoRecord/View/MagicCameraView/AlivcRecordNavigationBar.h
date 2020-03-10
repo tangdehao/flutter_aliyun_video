@@ -76,6 +76,13 @@ typedef NS_ENUM(NSInteger, AlivcRecordTorchMode){
 - (void)setFinishButtonEnabled:(BOOL)enabled;
 
 /**
+ 设置完成按钮隐藏
+
+ @param enabled 是否可点击
+ */
+- (void)setFinishButtonHidden:(BOOL)enabled;
+
+/**
  设置倒计时按钮可点击状态
  
  @param enabled 是否可点击
