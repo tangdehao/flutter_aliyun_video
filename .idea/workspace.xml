@@ -5,24 +5,695 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5383e202-7e2b-45f7-b13b-aaac979841c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/EditorActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/IMVForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/PasterForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/ResourceForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/AlivcSnapshot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/BasicRenderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/ChineseUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/CompatUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/EditorCommon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/LanguageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/MD5Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/MatrixUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/UriUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/VideoInfoUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/AlivcCircleLoadingDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/AliyunPasterWithImageView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/AliyunPasterWithTextView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/AutoResizingEditText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/AutoResizingTextView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/BaseAliyunPasterView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/WheelView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/AssetPackageFileExtractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/BridgeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/DbUpgradeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/DownloaderManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/DownloaderManagerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/FileDownloaderCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/FileDownloaderDBController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/FileDownloaderDBOpenHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/FileDownloaderModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/FileProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/ListenerManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/OkHttp3Connection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/SSLSocketFactoryCompat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/ZIPFileProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/ZipFileExtractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/control/EditorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/control/OnEffectChangeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/control/OnItemClickListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/control/OnTabChangeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/filter/AnimationFilterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/AbstractPasterUISimpleImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/ColorViewHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/ColorViewPagerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/OverlayThumbLineBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/PasterUICaptionImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/PasterUIGifImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/PasterUITextImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/ThumbLineBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/ThumbLineConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/ThumbLineOverlay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/ThumbLineOverlayHandleView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/ThumbRecyclerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/trans/TransitionAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/trans/TransitionChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/trans/TransitionEffectAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/trans/TransitionEffectCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/view/AlivcEditView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/view/SharedPreferenceUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/view/ViewStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/viewoperate/ViewOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/BaseChooser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/ColorFilterChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/FilterAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/FontAnimationAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/MusicChooser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/OnEffectActionLister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/TextDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/TimeChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/caption/CaptionAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/caption/CaptionChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/caption/CategoryAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/caption/FontAnimationAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/caption/TextDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/control/OnItemTouchListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/control/TabGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/control/TabViewStackBinding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/cover/CoverChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/filter/AnimationFilterChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/filter/AnimationFilterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/filter/ColorFilterChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/filter/EffectAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/filter/FilterAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/imv/IMVPreviewDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/imv/ImvAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/imv/ImvChooserMediator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/imv/ViewMediaPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/overlay/AbstractPageListCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/overlay/OverlayAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/overlay/OverlayChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/overlay/PasterPreviewDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/paint/ColorAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/paint/PaintChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/sound/EffectSoundAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/sound/MockEffectSoundData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/sound/SoundEffectChooseView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/sound/SoundEffectInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/ClearAnimationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/ConfirmAnimationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/DeleteLastAnimationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/Dispatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/FilterTabClick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/LongClickAnimationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/LongClickUpAnimationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/MessageHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/MessageInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/MessageQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/SelectColorFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/music/MusicAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/music/MusicChooseView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/music/MusicLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/music/MusicQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/publish/ComposeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/publish/PublishActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/util/ThreadUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/color/alivc_music_singer_text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/color/alivc_music_titile_text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/alivc_svideo_shap_player_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/alivc_svideo_shape_effect_foreground_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/alivc_svideo_shape_effect_press_state.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/aliyun_svideo_backgroud_gaosi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/aliyun_svideo_bg_parser_preview_cancel_rect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/aliyun_svideo_compose_indiate_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/aliyun_svideo_publish_progress_drawable.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/aliyun_svideo_shape_border_rect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/aliyun_svideo_shape_effect_selector_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/aliyun_svideo_shape_timeline_duration_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_circle_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_fade_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_fivepointstar_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_linearwipe_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_none_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_none_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_shutter_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_shutter_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_style_download_progress.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_svideo_effect_sound_default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_svideo_effect_sound_devil.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_svideo_effect_sound_echo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_svideo_effect_sound_loli.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_svideo_effect_sound_minions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_svideo_effect_sound_reverb.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_svideo_effect_sound_robot.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_svideo_effect_sound_uncle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_svideo_shap_circle_white_light.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_svideo_shape_effect_download_finish.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_svideo_shape_effect_icon_frame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_svideo_time_fast.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_svideo_time_invert.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_svideo_time_repeat.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/alivc_svideo_time_slow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_selector_effect_category_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_shape_caption_manager_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_shape_effect_category_selected.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_shape_effect_category_unselected.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_shape_oval_red.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_shape_paint_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_theme_default_btn_edit_overlay_cancel_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_theme_default_btn_edit_overlay_mirror_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_theme_default_btn_edit_overlay_text_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_theme_default_btn_edit_overlay_transform_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_theme_default_edit_diy_overlay_content_frame_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_time_fast_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_time_invert_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_time_none_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_time_repeat_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_time_slow_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_circle_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_fade_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_fivepointstar_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_down_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_down_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_left_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_left_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_right_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_right_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_up_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_up_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_acitvity_edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_activity_publish.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_dialog_imv_preview.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_dialog_paster_preview.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_dialog_text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_dialog_text_color_container.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_dialog_text_item_font_effect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_dialog_text_item_tab.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_include_action_bar_profile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_include_edit_bottom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_include_effect_title.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_include_effect_title1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_include_split_line.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_item_category.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_item_color.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_item_effcet_sound.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_item_effect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_item_more_caption.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_item_more_effect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_item_paster.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_item_textcolor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_item_timeline_thumbnail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_item_transition.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_item_transition_effect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_chooser_animation_filter.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_chooser_caption.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_chooser_cover.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_chooser_mv.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_chooser_overlay.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_chooser_paint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_chooser_sound.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_chooser_time.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_chooser_transition.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_paster_caption.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_paster_gif.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_paster_text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_timeline_invert_overlay.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_timeline_overlay.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_editor_view_tip_first_show.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_music_item_music.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_music_view_chooser_music.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_common_icon_circle_progress.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_devil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_echo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_loli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_minions.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_reverb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_robot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_uncle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_icon_download_finish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_svideo_black_circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_svideo_effect.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_svideo_effect_time_fast.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_svideo_effect_time_flow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_svideo_effect_time_invert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_svideo_effect_time_repeat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_svideo_icon_cover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_svideo_icon_effect_cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_svideo_icon_effect_revoke.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_svideo_icon_effect_time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_svideo_icon_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/alivc_svideo_tip_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_crop_svideo_icon_next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_aliyun_svideo_icon_cover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_caption.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_color_check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_complete_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_complete_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_cover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_dismiss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_font_color_none.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_animation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_caption.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_composite_fail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_composite_success.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_cover_slide.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_effect_cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_effect_confirm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_effect_manage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_font.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_keyboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_music_download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_none.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_overlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_slide_head.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_add_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_circle_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_fade.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_fade_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_fivepointstar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_fivepointstar_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_linearwipe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_scale.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_shutter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_shutter_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_down_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_left_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_right_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_up_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_voice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_more.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_mv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_none_emoj.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_overlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_parser_preview_cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_parser_preview_cancel_pressed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_qupai_edit_overlay_cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_qupai_edit_overlay_mirror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_qupai_edit_overlay_text.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_qupai_edit_overlay_transform.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_sound.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_speed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_system_font_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_backrun_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_backrun_select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_fast_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_fast_select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_none_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_none_select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_repeat_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_repeat_select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_slow_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_slow_select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_transition.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_undo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/mipmap-xhdpi/aliyun_svideo_voice_none.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/values/AlivcSvideoEditConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/values/ds.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/EditorActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/IMVForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/PasterForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/ResourceForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/AlivcSnapshot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/BasicRenderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/ChineseUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/CompatUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/EditorCommon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/LanguageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/MD5Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/MatrixUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/UriUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/utils/VideoInfoUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/AlivcCircleLoadingDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/AliyunPasterWithImageView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/AliyunPasterWithTextView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/AutoResizingEditText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/AutoResizingTextView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/BaseAliyunPasterView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/WheelView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/AssetPackageFileExtractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/BridgeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/DbUpgradeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/DownloaderManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/DownloaderManagerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/FileDownloaderCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/FileDownloaderDBController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/FileDownloaderDBOpenHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/FileDownloaderModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/FileProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/ListenerManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/OkHttp3Connection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/SSLSocketFactoryCompat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/ZIPFileProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/download/zipprocessor/ZipFileExtractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/control/EditorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/control/OnEffectChangeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/control/OnItemClickListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/control/OnTabChangeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/filter/AnimationFilterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/AbstractPasterUISimpleImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/ColorViewHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/ColorViewPagerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/OverlayThumbLineBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/PasterUICaptionImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/PasterUIGifImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/PasterUITextImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/ThumbLineBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/ThumbLineConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/ThumbLineOverlay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/ThumbLineOverlayHandleView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/thumb/ThumbRecyclerAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/trans/TransitionAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/trans/TransitionChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/trans/TransitionEffectAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/trans/TransitionEffectCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/view/AlivcEditView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/view/SharedPreferenceUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/view/ViewStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/editor/viewoperate/ViewOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/BaseChooser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/ColorFilterChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/FilterAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/FontAnimationAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/MusicChooser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/OnEffectActionLister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/TextDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/TimeChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/caption/CaptionAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/caption/CaptionChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/caption/CategoryAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/caption/FontAnimationAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/caption/TextDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/control/OnItemTouchListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/control/TabGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/control/TabViewStackBinding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/cover/CoverChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/filter/AnimationFilterChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/filter/AnimationFilterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/filter/ColorFilterChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/filter/EffectAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/filter/FilterAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/imv/IMVPreviewDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/imv/ImvAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/imv/ImvChooserMediator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/imv/ViewMediaPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/overlay/AbstractPageListCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/overlay/OverlayAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/overlay/OverlayChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/overlay/PasterPreviewDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/paint/ColorAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/paint/PaintChooserView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/sound/EffectSoundAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/sound/MockEffectSoundData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/sound/SoundEffectChooseView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/effects/sound/SoundEffectInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/ClearAnimationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/ConfirmAnimationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/DeleteLastAnimationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/Dispatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/FilterTabClick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/LongClickAnimationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/LongClickUpAnimationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/MessageHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/MessageInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/MessageQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/msg/SelectColorFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/music/MusicAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/music/MusicChooseView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/music/MusicLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/music/MusicQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/publish/ComposeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/publish/PublishActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/util/ThreadUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/color/alivc_music_singer_text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/color/alivc_music_titile_text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/alivc_svideo_shap_player_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/alivc_svideo_shape_effect_foreground_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/alivc_svideo_shape_effect_press_state.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/aliyun_svideo_backgroud_gaosi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/aliyun_svideo_bg_parser_preview_cancel_rect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/aliyun_svideo_compose_indiate_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/aliyun_svideo_publish_progress_drawable.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/aliyun_svideo_shape_border_rect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/aliyun_svideo_shape_effect_selector_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/aliyun_svideo_shape_timeline_duration_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_circle_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_fade_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_fivepointstar_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_linearwipe_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_none_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_none_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_shutter_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable-xhdpi/aliyun_svideo_video_edit_transition_shutter_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_style_download_progress.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_svideo_effect_sound_default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_svideo_effect_sound_devil.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_svideo_effect_sound_echo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_svideo_effect_sound_loli.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_svideo_effect_sound_minions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_svideo_effect_sound_reverb.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_svideo_effect_sound_robot.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_svideo_effect_sound_uncle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_svideo_shap_circle_white_light.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_svideo_shape_effect_download_finish.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_svideo_shape_effect_icon_frame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_svideo_time_fast.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_svideo_time_invert.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_svideo_time_repeat.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/alivc_svideo_time_slow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_selector_effect_category_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_shape_caption_manager_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_shape_effect_category_selected.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_shape_effect_category_unselected.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_shape_oval_red.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_shape_paint_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_theme_default_btn_edit_overlay_cancel_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_theme_default_btn_edit_overlay_mirror_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_theme_default_btn_edit_overlay_text_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_theme_default_btn_edit_overlay_transform_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_theme_default_edit_diy_overlay_content_frame_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_time_fast_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_time_invert_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_time_none_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_time_repeat_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_time_slow_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_circle_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_fade_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_fivepointstar_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_down_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_down_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_left_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_left_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_right_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_right_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_up_effect_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/drawable/aliyun_svideo_video_edit_transition_translate_up_selector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_acitvity_edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_activity_publish.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_dialog_imv_preview.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_dialog_paster_preview.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_dialog_text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_dialog_text_color_container.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_dialog_text_item_font_effect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_dialog_text_item_tab.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_include_action_bar_profile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_include_edit_bottom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_include_effect_title.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_include_effect_title1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_include_split_line.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_item_category.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_item_color.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_item_effcet_sound.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_item_effect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_item_more_caption.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_item_more_effect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_item_paster.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_item_textcolor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_item_timeline_thumbnail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_item_transition.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_item_transition_effect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_chooser_animation_filter.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_chooser_caption.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_chooser_cover.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_chooser_mv.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_chooser_overlay.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_chooser_paint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_chooser_sound.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_chooser_time.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_chooser_transition.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_paster_caption.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_paster_gif.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_paster_text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_timeline_invert_overlay.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_timeline_overlay.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_editor_view_tip_first_show.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_music_item_music.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/alivc_music_view_chooser_music.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_common_icon_circle_progress.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_devil.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_echo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_loli.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_minions.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_reverb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_robot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_effect_sound_uncle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_icon_download_finish.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_svideo_black_circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_svideo_effect.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_svideo_effect_time_fast.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_svideo_effect_time_flow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_svideo_effect_time_invert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_svideo_effect_time_repeat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_svideo_icon_cover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_svideo_icon_effect_cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_svideo_icon_effect_revoke.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_svideo_icon_effect_time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_svideo_icon_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/alivc_svideo_tip_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_crop_svideo_icon_next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_aliyun_svideo_icon_cover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_caption.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_color_check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_complete_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_complete_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_cover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_dismiss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_font_color_none.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_animation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_caption.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_composite_fail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_composite_success.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_cover_slide.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_effect_cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_effect_confirm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_effect_manage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_font.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_keyboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_music_download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_none.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_overlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_slide_head.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_add_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_circle_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_fade.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_fade_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_fivepointstar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_fivepointstar_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_linearwipe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_scale.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_shutter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_shutter_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_down_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_left_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_right_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_transition_translate_up_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_icon_voice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_more.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_mv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_none_emoj.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_overlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_paint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_parser_preview_cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_parser_preview_cancel_pressed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_qupai_edit_overlay_cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_qupai_edit_overlay_mirror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_qupai_edit_overlay_text.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_qupai_edit_overlay_transform.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_sound.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_speed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_system_font_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_backrun_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_backrun_select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_fast_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_fast_select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_none_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_none_select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_repeat_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_repeat_select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_slow_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_time_slow_select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_transition.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_undo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/mipmap-xhdpi/aliyun_svideo_voice_none.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/values/AlivcSvideoEditConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/values/ds.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/enums/BeautyMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/enums/BeautyMode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/face/AlivcBeautyFaceSettingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/face/AlivcBeautyFaceSettingView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/face/BeautyDefaultFaceSettingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/face/BeautyDefaultFaceSettingView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/skin/AlivcBeautySkinSettingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/widget/beauty/skin/AlivcBeautySkinSettingView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/util/SharedPreferenceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/util/SharedPreferenceUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/AlivcSvideoMixRecordActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/AlivcSvideoMixRecordActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/AlivcSvideoRecordActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/AlivcSvideoRecordActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/http/EffectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/http/EffectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/music/MusicFileBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/music/MusicFileBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/util/MusicQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/util/MusicQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/AliyunSVideoRecordView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/AliyunSVideoRecordView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/effects/face/AlivcBeautyFaceFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/effects/face/AlivcBeautyFaceFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/alivc_beauty_default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_beauty_default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/alivc_beauty_face_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/alivc_beauty_face_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/effects/filter/EffectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/effects/filter/EffectInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/effects/filter/UIEditorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/effects/filter/UIEditorPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/music/MusicSelectListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/music/MusicSelectListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/res/values/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values/attrs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/res/values/color.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values/color.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/AlivcSvideoMixRecordActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/AlivcSvideoMixRecordActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/AlivcSvideoRecordActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/AlivcSvideoRecordActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/http/EffectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/http/EffectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/music/MusicFileBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/music/MusicFileBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/util/MusicQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/util/MusicQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/effects/filter/EffectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/effects/filter/EffectInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/effects/filter/UIEditorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/effects/filter/UIEditorPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/music/MusicSelectListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/music/MusicSelectListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/values/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/values/attrs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/values/color.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/values/color.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/example/android/app/build.gradle" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.dart_tool/" />
-    <ignored path="$PROJECT_DIR$/.idea/" />
-    <ignored path="$PROJECT_DIR$/.pub/" />
-    <ignored path="$PROJECT_DIR$/build/" />
-    <ignored path="$PROJECT_DIR$/example/.pub/" />
-    <ignored path="$PROJECT_DIR$/example/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,29 +703,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="9HQ0219524008785" />
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/aliyun_video.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_29" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -64,7 +713,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>startVideo</find>
       <find>AlivcSvideoRecordActivity</find>
       <find>onMethodCall</find>
       <find>getData</find>
@@ -94,6 +742,7 @@
       <find>VideoCodecs</find>
       <find>kotlin</find>
       <find>kotlin_version</find>
+      <find>R.id.beauty_advanced_4</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/android/src/main/kotlin</dir>
@@ -104,52 +753,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/test/aliyun_video_test.dart" />
-        <option value="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/example/lib/video_play_page.dart" />
-        <option value="$PROJECT_DIR$/pubspec.yaml" />
-        <option value="$PROJECT_DIR$/CHANGELOG.md" />
-        <option value="$PROJECT_DIR$/example/pubspec.yaml" />
-        <option value="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/AliyunVideoPlugin.kt" />
-        <option value="$PROJECT_DIR$/android/build.gradle" />
-        <option value="$PROJECT_DIR$/lib/aliyun_video.dart" />
-        <option value="$PROJECT_DIR$/example/android/build.gradle" />
-        <option value="$PROJECT_DIR$/example/lib/main.dart" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="41" />
-    <option name="y" value="65" />
-    <option name="width" value="1285" />
-    <option name="height" value="793" />
-  </component>
+  <component name="ProjectId" id="1ZcDoPXcNZhv3vQYK8o7j4q4dj2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="flutter_aliyun_video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_aliyun_video" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -187,253 +793,18 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="68" y="65" width="1285" height="793" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.4473049" />
-      <window_info id="Captures" order="1" side_tool="true" />
-      <window_info id="Structure" order="2" side_tool="true" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="4" />
-      <window_info id="Build Variants" order="5" side_tool="true" />
-      <window_info id="Resources Explorer" order="6" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Dart Analysis" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.42920354" />
-      <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Logcat" order="4" weight="0.2742857" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.5042857" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.4498525" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Find" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.26548672" />
-      <window_info anchor="bottom" id="DevEco Output" order="11" />
-      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Flutter Inspector" order="3" />
-      <window_info anchor="right" id="Flutter Outline" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Flutter Performance" order="6" />
-      <window_info anchor="right" id="Preview" order="7" />
-    </layout>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/aliyun_video_test.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/SDK/FlutterSDK/flutter/bin/cache/pkg/sky_engine/lib/async/future.dart" />
-    <entry file="file://$USER_HOME$/SDK/FlutterSDK/flutter/packages/flutter/lib/src/widgets/basic.dart" />
-    <entry file="file://$USER_HOME$/SDK/FlutterSDK/flutter/.pub-cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/path_provider-1.4.5/lib/path_provider.dart" />
-    <entry file="file://$USER_HOME$/SDK/FlutterSDK/flutter/packages/flutter/lib/src/cupertino/app.dart" />
-    <entry file="file://$USER_HOME$/SDK/FlutterSDK/flutter/packages/flutter/lib/src/foundation/change_notifier.dart" />
-    <entry file="file://$USER_HOME$/SDK/FlutterSDK/flutter/bin/cache/pkg/sky_engine/lib/convert/json.dart" />
-    <entry file="file://$USER_HOME$/SDK/FlutterSDK/flutter/packages/flutter/lib/src/services/platform_channel.dart" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/SDK/FlutterSDK/flutter/packages/flutter/lib/src/foundation/print.dart" />
-    <entry file="file://$PROJECT_DIR$/example/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="66" lean-forward="true" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/SDK/FlutterSDK/flutter/bin/cache/dart-sdk/lib/io/io_sink.dart" />
-    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/AliyunVideoRecorder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#56202#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/res/layout/activity_copyright_web.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/util/gles/Texture2dProgram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="82" column="80" selection-start-line="82" selection-start-column="80" selection-end-line="82" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/media/MediaInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="46" column="58" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/ActionInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="140" column="39" selection-start-line="140" selection-start-column="18" selection-end-line="140" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/res/layout/alivc_recorder_activity_record.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/res/layout/alivc_recorder_activity_recorder.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="97" column="52" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/bean/AlivcRecordInputParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="85" column="24" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="68" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/AlivcSvideoRecordActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="201" column="8" selection-start-line="201" selection-start-column="8" selection-end-line="201" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/base/AlivcSvideoEditParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="65" column="11" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/AliyunVideoPlugin.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding>
-            <element signature="e#31#826#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/control/ControlView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="794" column="26" selection-start-line="794" selection-start-column="16" selection-end-line="794" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/view/control/RecordMode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/sdk/flutter/packages/flutter/lib/src/widgets/text.dart" />
-    <entry file="file://$USER_HOME$/sdk/flutter/packages/flutter/lib/src/widgets/framework.dart" />
-    <entry file="file://$PROJECT_DIR$/example/lib/video_play_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/android/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/aliyun_video.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="masterDetails">
     <states>

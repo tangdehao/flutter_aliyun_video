@@ -294,6 +294,11 @@ public class AlivcSvideoRecordActivity extends AppCompatActivity {
                 }
 
             }
+
+            @Override
+            public void onCancel() {
+
+            }
         });
 
         ///切换？

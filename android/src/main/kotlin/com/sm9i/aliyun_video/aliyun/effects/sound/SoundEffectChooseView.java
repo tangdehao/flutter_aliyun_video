@@ -1,0 +1,69 @@
+package com.sm9i.aliyun_video.aliyun.effects.sound;
+
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.util.AttributeSet;
+import android.view.LayoutInflater;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.sm9i.aliyun_video.R;
+import com.sm9i.aliyun_video.aliyun.editor.control.OnItemClickListener;
+import com.sm9i.aliyun_video.aliyun.effects.BaseChooser;
+import com.sm9i.aliyun_video.aliyun.view.effects.filter.EffectInfo;
+import com.sm9i.aliyun_video.aliyun.view.effects.filter.SpaceItemDecoration;
+
+public class SoundEffectChooseView extends BaseChooser {
+
+    private EffectSoundAdapter adapter;
+
+    public SoundEffectChooseView(@NonNull Context context) {
+        this(context, null);
+    }
+
+    public SoundEffectChooseView(@NonNull Context context, @Nullable AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+    public SoundEffectChooseView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+    @Override
+    protected void init() {
+        LayoutInflater.from(getContext()).inflate(R.layout.alivc_editor_view_chooser_sound, this);
+        RecyclerView recyclerView = findViewById(R.id.effect_sound_list_filter);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),  LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.addItemDecoration(new SpaceItemDecoration(getContext().getResources().getDimensionPixelSize(R.dimen.list_item_space)));
+
+        if (adapter == null) {
+            adapter = new EffectSoundAdapter(getContext());
+            adapter.setOnItemClickListener(new OnItemClickListener() {
+
+                @Override
+                public boolean onItemClick(EffectInfo effectInfo, int index) {
+                    mOnEffectChangeListener.onEffectChange(effectInfo);
+                    return false;
+                }
+            });
+            adapter.setDataList(MockEffectSoundData.getEffectSound());
+        }
+        recyclerView.setAdapter(adapter);
+
+        TextView soundTitle = findViewById(R.id.effect_sound_title_tv);
+        soundTitle.setText(R.string.alivc_editor_dialog_sound_tittle);
+        Drawable top = getContext().getResources().getDrawable(R.mipmap.alivc_svideo_icon_tab_filter);
+        top.setBounds(0, 0, top.getMinimumWidth(), top.getMinimumHeight());
+        soundTitle.setCompoundDrawables(top, null, null, null );
+    }
+
+    @Override
+    public boolean isPlayerNeedZoom() {
+        return false;
+    }
+}

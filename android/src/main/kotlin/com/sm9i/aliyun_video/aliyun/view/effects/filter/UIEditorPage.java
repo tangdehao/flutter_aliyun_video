@@ -9,9 +9,13 @@ package com.sm9i.aliyun_video.aliyun.view.effects.filter;
  */
 public enum UIEditorPage {
     /**
-     * 滤镜特效
+     * 滤镜
      */
-    FILTER_EFFECT,
+    FILTER,
+    /**
+     * 音乐
+     */
+    AUDIO_MIX,
     /**
      * 动图
      */
@@ -24,25 +28,39 @@ public enum UIEditorPage {
      * MV
      */
     MV,
+
     /**
-     * 背景音乐
+     * 音效
      */
-    AUDIO_MIX,
+    SOUND,
     /**
-     * 画笔特效
+     * 特效
      */
-    PAINT,
+    FILTER_EFFECT,
     /**
      * 时间特效
      */
     TIME,
     /**
-     * 字体特效
+     * 转场
      */
-    FONT
-    ;
+    TRANSITION,
+    /**
+     * 涂鸦
+     */
+    PAINT,
+    /**
+     *封面
+     */
+    COVER,
+    /**
+     * 字体
+     */
+    FONT;
 
-    public static UIEditorPage get(int index) {
+
+    public static
+    UIEditorPage get(int index) {
         return values()[index];
     }
 

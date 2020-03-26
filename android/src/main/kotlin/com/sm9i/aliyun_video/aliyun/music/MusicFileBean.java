@@ -28,6 +28,10 @@ public class MusicFileBean {
      */
     public String path;
     /**
+     * 音乐文件的Uri
+     */
+    public String uri;
+    /**
      * 媒体播放总时间
      */
     public int duration;
@@ -115,5 +119,9 @@ public class MusicFileBean {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public void setUri(String uri) {
+        this.uri = uri;
     }
 }

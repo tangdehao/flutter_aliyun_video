@@ -29,9 +29,14 @@ import com.aliyun.svideo.sdk.external.struct.snap.AliyunSnapVideoParam;
 
 import java.io.File;
 import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.sm9i.aliyun_video.R;
 import com.sm9i.aliyun_video.aliyun.base.widget.ProgressDialog;
+import com.sm9i.aliyun_video.aliyun.editor.bean.AlivcEditInputParam;
+import com.sm9i.aliyun_video.aliyun.editor.view.AlivcEditView;
+import com.sm9i.aliyun_video.aliyun.media.MediaInfo;
 import com.sm9i.aliyun_video.aliyun.mixrecorder.AlivcRecorderFactory;
 import com.sm9i.aliyun_video.aliyun.util.Common;
 import com.sm9i.aliyun_video.aliyun.util.FixedToastUtils;
@@ -64,6 +69,7 @@ public class AlivcSvideoMixRecordActivity extends AppCompatActivity {
     private AliyunVideoParam mVideoParam;
     private AliyunSVideoRecordView mVideoRecordView;
     private int mFrame;
+    private String videoPath;
 
     /**
      * 判断是否电话状态
@@ -133,6 +139,7 @@ public class AlivcSvideoMixRecordActivity extends AppCompatActivity {
         MediaMetadataRetriever mmr = new MediaMetadataRetriever();
         try {
             mmr.setDataSource(mVideoPath);
+
             mMaxDuration = Integer.parseInt(mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION));
             mmr.release();
         } catch (Throwable e) {
@@ -307,27 +314,28 @@ public class AlivcSvideoMixRecordActivity extends AppCompatActivity {
             @Override
             public void onComplete(String path, int duration, int ratioMode) {
                 //录制完成
-//                MediaInfo mediaInfo = new MediaInfo();
-//                mediaInfo.filePath = path;
-//                mediaInfo.startTime = 0;
-//                mediaInfo.mimeType = "video";
-//                mediaInfo.duration = duration;
-//                List<MediaInfo> infoList = new ArrayList<>();
-//                infoList.add(mediaInfo);
-//                AlivcEditInputParam param = new AlivcEditInputParam.Builder()
-//                        .setHasTailAnimation(false)
-//                        .addMediaInfos(infoList)
-//                        .setCanReplaceMusic(isUseMusic)
-//                        .setGop(mGop)
-//                        .setVideoQuality(mVideoQuality)
-//                        .setVideoCodec(mVideoCodec)
-//                        .setFrameRate(mFrame)
-//                        .setIsMixRecorder(true)
-//                        .build();
-                setResult(AlivcMixMediaActivity.RESPONSE_CODE, new Intent().putExtra("param", path));
+                MediaInfo mediaInfo = new MediaInfo();
+                mediaInfo.filePath = path;
+                mediaInfo.startTime = 0;
+                mediaInfo.mimeType = "video";
+                mediaInfo.duration = duration;
+                List<MediaInfo> infoList = new ArrayList<>();
+                infoList.add(mediaInfo);
+                AlivcEditInputParam param = new AlivcEditInputParam.Builder()
+                        .setHasTailAnimation(false)
+                        .addMediaInfos(infoList)
+                        .setCanReplaceMusic(isUseMusic)
+                        .setGop(mGop)
+                        .setVideoQuality(mVideoQuality)
+                        .setVideoCodec(mVideoCodec)
+                        .setFrameRate(mFrame)
+                        .setIsMixRecorder(true)
+                        .build();
+                videoPath = path;
+//                setResult(AlivcMixMediaActivity.RESPONSE_CODE, new Intent().putExtra("param", path));
                 Log.i("地址", path);
-                finish();
-                //  EditorActivity.startEdit(AlivcSvideoMixRecordActivity.this, param);
+//                finish();
+                EditorActivity.startEdit(AlivcSvideoMixRecordActivity.this, param);
             }
 
             @Override
@@ -336,6 +344,7 @@ public class AlivcSvideoMixRecordActivity extends AppCompatActivity {
             }
         });
     }
+
 
     @Override
     protected void onPause() {
@@ -384,6 +393,19 @@ public class AlivcSvideoMixRecordActivity extends AppCompatActivity {
             if (resultCode == Activity.RESULT_OK) {
                 mVideoRecordView.deleteAllPart();
                 finish();
+            }
+        }
+        if (requestCode == 100) {
+            if (resultCode == AlivcEditView.resultCode) {
+                if (data != null && data.hasExtra("res")) {
+                    boolean isOk = data.getBooleanExtra("res", false);
+                    if (isOk) {
+                        setResult(AlivcMixMediaActivity.RESPONSE_CODE, new Intent().putExtra("param", videoPath));
+                        finish();
+                    } else {
+                        mVideoRecordView.delete();
+                    }
+                }
             }
         }
     }
