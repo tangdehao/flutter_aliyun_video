@@ -30,6 +30,7 @@ import com.aliyun.svideo.sdk.external.struct.encoder.VideoCodecs;
 import com.sm9i.aliyun_video.R;
 import com.sm9i.aliyun_video.aliyun.bean.AlivcRecordInputParam;
 import com.sm9i.aliyun_video.aliyun.editor.bean.AlivcEditInputParam;
+import com.sm9i.aliyun_video.aliyun.editor.view.AlivcEditView;
 import com.sm9i.aliyun_video.aliyun.media.MediaInfo;
 import com.sm9i.aliyun_video.aliyun.mixrecorder.AlivcRecorderFactory;
 import com.sm9i.aliyun_video.aliyun.music.MusicFileBean;
@@ -58,8 +59,7 @@ public class AlivcSvideoRecordActivity extends AppCompatActivity {
     public static final int REQUEST_CODE = 1999;
     public static final int RESPONSE_VIDEO_CODE = 1998;
     public static final int RESPONSE_PHOTO_CODE = 1999;
-
-
+    private String videoPath;
     private AliyunSVideoRecordView videoRecordView;
     private AlivcRecordInputParam mInputParam;
     private static final int REQUEST_CODE_PLAY = 2002;
@@ -324,9 +324,11 @@ public class AlivcSvideoRecordActivity extends AppCompatActivity {
                         .setVideoCodec(mInputParam.getVideoCodec())
                         .setRatio(ratio)
                         .build();
+                videoPath = path;
                 // setResult(RESPONSE_CODE, new Intent().putExtra("param", param));
-                setResult(RESPONSE_VIDEO_CODE, new Intent().putExtra("param", mediaInfo.filePath));
-                finish();
+                // setResult(RESPONSE_VIDEO_CODE, new Intent().putExtra("param", mediaInfo.filePath));
+//                finish();
+                EditorActivity.startEdit(AlivcSvideoRecordActivity.this, param);
 //                 EditorActivity.startEdit(AlivcSvideoRecordActivity.this, param);
             }
 
@@ -386,6 +388,20 @@ public class AlivcSvideoRecordActivity extends AppCompatActivity {
             if (resultCode == Activity.RESULT_OK) {
                 videoRecordView.deleteAllPart();
                 finish();
+            }
+        }
+        if (requestCode == 100) {
+            if (resultCode == AlivcEditView.resultCode) {
+                if (data != null && data.hasExtra("res")) {
+                    boolean isOk = data.getBooleanExtra("res", false);
+                    if (isOk) {
+                        setResult(RESPONSE_VIDEO_CODE, new Intent().putExtra("param", videoPath));
+//                        setResult(AlivcMixMediaActivity.RESPONSE_CODE, new Intent().putExtra("param", videoPath));
+                        finish();
+                    } else {
+                        videoRecordView.delete();
+                    }
+                }
             }
         }
     }
