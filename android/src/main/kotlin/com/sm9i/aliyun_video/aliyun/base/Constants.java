@@ -1,5 +1,7 @@
 package com.sm9i.aliyun_video.aliyun.base;
 
+import android.content.Context;
+import android.os.Build;
 import android.os.Environment;
 
 import java.io.File;
@@ -43,6 +45,39 @@ public class Constants {
                 //noinspection ResultOfMethodCallIgnored
                 dir.mkdirs();
             }
+        }
+        /**
+         * 获取外部缓存目录 版本默认"/storage/emulated/0/Android/data/包名/file/Cache"
+         *
+         * @param context Context
+         * @return string path
+         */
+        public static String getCacheDir(Context context) {
+            File cacheDir = context.getExternalCacheDir();
+            return cacheDir == null ? "" : cacheDir.getPath();
+        }
+
+
+        /**
+         * 裁剪 & 录制 & 转码输出文件的目录
+         * android Q 版本默认路径
+         * /storage/emulated/0/Android/data/包名/files/Media/
+         * android Q 以下版本默认"/sdcard/DCIM/Camera/"
+         */
+        public static String getDir(Context context) {
+            String dir;
+            if (Build.VERSION.SDK_INT >= 29) {
+                dir = context.getExternalFilesDir("") + File.separator + "Media" + File.separator;
+            } else {
+                dir = Environment.getExternalStorageDirectory() + File.separator + "DCIM"
+                        + File.separator + "Camera" + File.separator;
+            }
+            File file = new File(dir);
+            if (!file.exists()) {
+                //noinspection ResultOfMethodCallIgnored
+                file.mkdirs();
+            }
+            return dir;
         }
 
     }

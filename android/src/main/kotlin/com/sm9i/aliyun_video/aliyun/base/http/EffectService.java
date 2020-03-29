@@ -15,6 +15,7 @@ import com.aliyun.svideo.sdk.external.struct.form.IMVForm;
 import com.aliyun.svideo.sdk.external.struct.form.PasterForm;
 import com.aliyun.svideo.sdk.external.struct.form.PreviewPasterForm;
 import com.aliyun.svideo.sdk.external.struct.form.ResourceForm;
+import com.google.gson.reflect.TypeToken;
 //import com.google.gson.Gson;
 //import com.google.gson.GsonBuilder;
 //import com.google.gson.reflect.TypeToken;
@@ -35,11 +36,11 @@ public class EffectService {
 //    private static final String KEY_PACKAGE_NAME = "PACKAGE_NAME";
 //
 //    public static final int EFFECT_TEXT = 1;        //字体
-//    public static final int EFFECT_PASTER = 2;      //动图
-//    public static final int EFFECT_MV = 3;          //MV
+    public static final int EFFECT_PASTER = 2;      //动图
+    public static final int EFFECT_MV = 3;          //MV
 //    public static final int EFFECT_FILTER = 4;      //滤镜
 //    public static final int EFFECT_MUSIC = 5;       //音乐
-//    public static final int EFFECT_CAPTION = 6;     //字幕
+    public static final int EFFECT_CAPTION = 6;     //字幕
 //    public static final int EFFECT_FACE_PASTER = 7; //人脸动图
 //    public static final int EFFECT_IMG = 8;         //静态贴纸
 //    /**
@@ -85,6 +86,60 @@ public class EffectService {
 //        });
 //
 //    }
+//    /**
+//     * 素材分发服务为官方demo演示使用，无法达到商业化使用程度。请自行搭建相关的服务
+//     */
+//    public void loadingMusicData(String packageName, int pageNo, int pageSize, String keyWord, final HttpCallback<List<MusicFileBean>> callback) {
+//
+//        String url = BASE_URL + "/music/getRecommendMusic";
+//        RequestParams params = new RequestParams();
+//        params.addFormDataPart("pageNo", pageNo);
+//        params.addFormDataPart("pageSize", pageSize);
+//        params.addFormDataPart(KEY_PACKAGE_NAME, packageName );
+//
+//        if (!TextUtils.isEmpty(keyWord)) {
+//            params.addFormDataPart("keyWords", keyWord);
+//        }
+//        get(url, params, new StringHttpRequestCallback() {
+//            @Override
+//            protected void onSuccess(String s) {
+//                super.onSuccess(s);
+//                try {
+//                    JSONObject jsonObject = new JSONObject(s);
+//                    JSONObject dataObject = jsonObject.getJSONObject("data");
+//                    JSONArray jsonArray = dataObject.getJSONArray("musicList");
+//                    List<MusicBean> resourceList = mGson.fromJson(jsonArray.toString(), new TypeToken<List<MusicBean>>() {
+//                    } .getType());
+//                    if (callback != null) {
+//                        List<MusicFileBean> musicFileBeanList = new ArrayList<>();
+//                        for (MusicBean musicBean : resourceList) {
+//                            musicFileBeanList.add(new MusicFileBean(
+//                                    musicBean.getTitle(),
+//                                    musicBean.getArtistName(),
+//                                    musicBean.getMusicId(),
+//                                    musicBean.getImage()
+//                            ));
+//                        }
+//                        callback.onSuccess(musicFileBeanList);
+//                    }
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                    if (callback != null) {
+//                        callback.onFailure(e);
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(int errorCode, String msg) {
+//                super.onFailure(errorCode, msg);
+//                if (callback != null) {
+//                    callback.onFailure(new Throwable(msg));
+//                }
+//            }
+//        });
+//    }
+
 //    /**
 //     * 素材分发服务为官方demo演示使用，无法达到商业化使用程度。请自行搭建相关的服务
 //     */

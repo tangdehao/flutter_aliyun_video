@@ -13,7 +13,9 @@ import android.util.Log;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class MusicQuery extends AsyncTask<Void, ArrayList<MusicQuery.MediaEntity>, Void> {
+import com.sm9i.aliyun_video.aliyun.base.http.MusicFileBean;
+
+public class MusicQuery extends AsyncTask<Void, ArrayList<MusicFileBean>, Void> {
     private static final String TAG = "MusicQuery";
     private Context context;
     private OnResProgressListener l;
@@ -45,12 +47,12 @@ public class MusicQuery extends AsyncTask<Void, ArrayList<MusicQuery.MediaEntity
         return true;
     }
 
-    @Override
-    protected void onProgressUpdate(ArrayList<MediaEntity>... values) {
-        if(l != null){
-            l.onResProgress(values[0]);
-        }
-    }
+//    @Override
+//    protected void onProgressUpdate(ArrayList<MediaEntity>... values) {
+//        if (l != null) {
+//            l.onResProgress(values[0]);
+//        }
+//    }
 
     @Override
     protected Void doInBackground(Void... params) {
@@ -90,7 +92,7 @@ public class MusicQuery extends AsyncTask<Void, ArrayList<MusicQuery.MediaEntity
                 mediaEntity.size = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.SIZE));
                 mediaEntity.artist = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.ARTIST));
                 mediaEntity.path = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DATA));
-                if(mediaEntity.display_name.endsWith("mp3")||mediaEntity.display_name.endsWith("aac")) {
+                if (mediaEntity.display_name.endsWith("mp3") || mediaEntity.display_name.endsWith("aac")) {
                     mediaList.add(mediaEntity);
                 }
                 if (mediaList.size() % 20 == 0) {
@@ -108,10 +110,10 @@ public class MusicQuery extends AsyncTask<Void, ArrayList<MusicQuery.MediaEntity
         return null;
     }
 
-    private void publishRes(ArrayList<MediaEntity> list){
+    private void publishRes(ArrayList<MediaEntity> list) {
         ArrayList<MediaEntity> copy = new ArrayList<>();
         copy.addAll(list);
-        publishProgress(copy);
+//        publishProgress(copy);
     }
 
     public static class MediaEntity implements Serializable {

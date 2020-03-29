@@ -690,29 +690,7 @@ public class AliyunSVideoRecordView extends FrameLayout
 
             @Override
             public void onDeleteClick() {
-                if (isStopToCompleteDuration) {
-                    // 这里是因为如果 SDK 还没有回调onComplete,点击回删会出现删除的不是最后一段的问题
-                    return;
-                }
-                mRecordTimeView.deleteLast();
-                // clipManager.deletePart();
-                recorder.deleteLastPart();
-                isMaxDuration = false;
-                if (mControlView != null) {
-                    if (clipManager.getDuration() < clipManager.getMinDuration()) {
-                        mControlView.setCompleteEnable(false);
-                    }
-
-                    mControlView.updataCutDownView(true);
-                }
-
-                if (clipManager.getDuration() == 0) {
-                    //音乐可以选择
-                    recorder.restartMv();
-                    mControlView.setHasRecordPiece(false);
-                    isAllowChangeMv = true;
-                }
-                mControlView.setRecordTime(TimeFormatterUtils.formatTime(clipManager.getDuration()));
+                delete();
             }
 
             @Override
@@ -733,6 +711,32 @@ public class AliyunSVideoRecordView extends FrameLayout
 
         addSubView(mControlView);
         mControlView.setAspectRatio(mRatioMode);
+    }
+    public void delete(){
+        if (isStopToCompleteDuration) {
+            // 这里是因为如果 SDK 还没有回调onComplete,点击回删会出现删除的不是最后一段的问题
+            return;
+        }
+
+        mRecordTimeView.deleteLast();
+        // clipManager.deletePart();
+        recorder.deleteLastPart();
+        isMaxDuration = false;
+        if (mControlView != null) {
+            if (clipManager.getDuration() < clipManager.getMinDuration()) {
+                mControlView.setCompleteEnable(false);
+            }
+
+            mControlView.updataCutDownView(true);
+        }
+
+        if (clipManager.getDuration() == 0) {
+            //音乐可以选择
+            recorder.restartMv();
+            mControlView.setHasRecordPiece(false);
+            isAllowChangeMv = true;
+        }
+        mControlView.setRecordTime(TimeFormatterUtils.formatTime(clipManager.getDuration()));
     }
 
     /**
@@ -1557,7 +1561,7 @@ public class AliyunSVideoRecordView extends FrameLayout
 //            beautyService.bindFaceUnity(getContext(), faceUnityManager);
 //
 //        } else
-            if (BeautyMode.Normal == currentBeautyFaceMode) {
+        if (BeautyMode.Normal == currentBeautyFaceMode) {
             //普通美颜等级
             int beautyNormalFaceLevel = SharedPreferenceUtils.getBeautyNormalFaceLevel(getContext());
             recorder.setBeautyStatus(true);
