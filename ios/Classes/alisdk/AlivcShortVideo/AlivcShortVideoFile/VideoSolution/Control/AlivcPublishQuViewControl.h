@@ -8,6 +8,8 @@
 
 #import "AlivcKeyboardManageViewController.h"
 
+typedef void (^AlivcRecordFinishEmptyBlock)();
+
 @class AliyunMediaConfig;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -28,6 +30,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *videoPath;
 
+
+
+@property (nonatomic, assign) BOOL isCamera;
+@property (nonatomic, strong) NSString *cameraVideoPath;
+@property (nonatomic, strong) UIImage *cameraImage;
+@property (nonatomic, copy, nullable) AlivcRecordFinishEmptyBlock finishPublishBlock;
 
 @end
 
