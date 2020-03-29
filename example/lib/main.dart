@@ -62,6 +62,21 @@ class _MyAppState extends State<MyApp> {
               RaisedButton(
                 onPressed: () async {
                   if (hasPermissions) {
+                    // AliyunVideo.startCooperationVideo().then((res) {
+                    //   this.res = res;
+                    // });
+                    AliyunVideo.startCamera().then((res) {
+                      this.res = res;
+                    });
+                  } else {
+                    checkPermission();
+                  }
+                },
+                child: Text('take camera'),
+              ),
+              RaisedButton(
+                onPressed: () async {
+                  if (hasPermissions) {
                     AliyunVideo.startCooperationVideo().then((res) {
                       this.res = res;
                     });
@@ -69,7 +84,7 @@ class _MyAppState extends State<MyApp> {
                     checkPermission();
                   }
                 },
-                child: Text('take Cooperation'),
+                child: Text('take CooperationVideo'),
               ),
               RaisedButton(
                 onPressed: () async {
