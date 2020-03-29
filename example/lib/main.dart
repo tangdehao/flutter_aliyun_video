@@ -62,14 +62,26 @@ class _MyAppState extends State<MyApp> {
               RaisedButton(
                 onPressed: () async {
                   if (hasPermissions) {
-                    AliyunVideo.startCamera(mCreateType: 1).then((res) {
+                    AliyunVideo.startCamera().then((re) {
+                      this.res = re;
+                    });
+                  } else {
+                    checkPermission();
+                  }
+                },
+                child: Text('take camera'),
+              ),
+              RaisedButton(
+                onPressed: () async {
+                  if (hasPermissions) {
+                    AliyunVideo.startCooperationVideo().then((res) {
                       this.res = res;
                     });
                   } else {
                     checkPermission();
                   }
                 },
-                child: Text('take Cooperation'),
+                child: Text('take CooperationVideo'),
               ),
               RaisedButton(
                 onPressed: () async {
