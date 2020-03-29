@@ -30,9 +30,9 @@ class MethodCallHandlerImpl(private var activity: Activity, messenger: BinaryMes
 
 
     override fun onMethodCall(call: MethodCall, result: MethodChannel.Result) {
-        when {
-            call.method == "startVideo" -> startVideo(call, result)
-            call.method == "startCooperationVideo" -> startCooperationVideo(call, result)
+        when (call.method) {
+            "startVideo" -> startVideo(call, result)
+            "startCooperationVideo" -> startCooperationVideo(call, result)
             else -> result.notImplemented()
         }
     }
