@@ -59,7 +59,9 @@ public class AlivcSvideoRecordActivity extends AppCompatActivity {
     public static final int REQUEST_CODE = 1999;
     public static final int RESPONSE_VIDEO_CODE = 1998;
     public static final int RESPONSE_PHOTO_CODE = 1999;
+    public static final int PREVIEW_REQUEST_CODE = 2000;
     private String videoPath;
+    private String cameraPath;
     private AliyunSVideoRecordView videoRecordView;
     private AlivcRecordInputParam mInputParam;
     private static final int REQUEST_CODE_PLAY = 2002;
@@ -334,8 +336,13 @@ public class AlivcSvideoRecordActivity extends AppCompatActivity {
 
             @Override
             public void onTakeComplete(String path) {
-                setResult(RESPONSE_PHOTO_CODE, new Intent().putExtra("param", path));
-                finish();
+                cameraPath = path;
+                Intent intent = new Intent();
+                intent.setClass(AlivcSvideoRecordActivity.this, PreViewActivity.class);
+                intent.putExtra("imagePath", path);
+                startActivityForResult(intent, PREVIEW_REQUEST_CODE);
+//                setResult(RESPONSE_PHOTO_CODE, new Intent().putExtra("param", path));
+//                finish();
             }
         });
     }
@@ -388,6 +395,15 @@ public class AlivcSvideoRecordActivity extends AppCompatActivity {
             if (resultCode == Activity.RESULT_OK) {
                 videoRecordView.deleteAllPart();
                 finish();
+            }
+        }
+        if (requestCode == PREVIEW_REQUEST_CODE) {
+            if (resultCode == PreViewActivity.resultCode) {
+                if (data.getBooleanExtra("res", false)) {
+                    setResult(RESPONSE_PHOTO_CODE, new Intent().putExtra("param", cameraPath));
+                    finish();
+                }
+
             }
         }
         if (requestCode == 100) {

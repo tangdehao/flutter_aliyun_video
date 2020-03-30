@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/alivc_common_theme_primary"
+    tools:context=".aliyun.activity.PreViewActivity">
+
+    <LinearLayout
+        android:id="@+id/bar_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/action_bar"
+            layout="@layout/alivc_editor_include_action_bar_profile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alivc_common_height_tittle_64" />
+
+        <com.sm9i.aliyun_video.aliyun.editor.thumb.OverlayThumbLineBar
+            android:id="@+id/simplethumblinebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_pre_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+
+</RelativeLayout>

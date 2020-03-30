@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5383e202-7e2b-45f7-b13b-aaac979841c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/example/lib/main.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/PreViewActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/layout/activity_pre_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/PreViewActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/res/layout/activity_pre_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/AlivcSvideoRecordActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/AlivcSvideoRecordActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/AlivcSvideoRecordActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/AlivcSvideoRecordActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,45 +35,6 @@
         <option value="Dart File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>AlivcSvideoRecordActivity</find>
-      <find>onMethodCall</find>
-      <find>getData</find>
-      <find>faster</find>
-      <find>alivc_recorder_control_rate_very_fast</find>
-      <find>alivc_recorder_activity_record</find>
-      <find>mRecordEntrance</find>
-      <find>alivc_recorder_activity_recorder</find>
-      <find>alivc_recordView</find>
-      <find>slower</find>
-      <find>findViewById</find>
-      <find>aliyun_rate_very_slow</find>
-      <find>aliyun_record_layout_bottom</find>
-      <find>startCamera</find>
-      <find>aliyun_video</find>
-      <find>Activity</find>
-      <find>startRecord</find>
-      <find>startActivity</find>
-      <find>recorder</find>
-      <find>registrar</find>
-      <find>ControlView</find>
-      <find>recordMode</find>
-      <find>RecordMode</find>
-      <find>INTENT_KEY_QUALITY</find>
-      <find>VideoQuality</find>
-      <find>mVideoQuality</find>
-      <find>VideoCodecs</find>
-      <find>kotlin</find>
-      <find>kotlin_version</find>
-      <find>R.id.beauty_advanced_4</find>
-    </findStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/android/src/main/kotlin</dir>
-      <dir>$PROJECT_DIR$/android/src/main/kotlin/com/sm9i</dir>
-      <dir>$PROJECT_DIR$/android/src/main/kotlin/com</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
