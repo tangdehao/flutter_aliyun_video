@@ -49,6 +49,8 @@
 
 @property (nonatomic, strong) UIView *lineView;
 
+@property (nonatomic,strong)UIImageView *cameraImgView;
+
 @end
 
 @implementation AlivcPublishQuViewControl
@@ -57,10 +59,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     [self configBaseUI];
     [self addNotification];
     [self initSDKAbout];
-    
     //baan-隐藏textfield
     self.titleView.hidden = true;
     self.titleView.userInteractionEnabled = false;
@@ -78,6 +80,13 @@
 - (void)dealloc{
     [self.editor stopEdit];
     [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+
+- (void)createCameraImageUI {
+    CGFloat imageHeight = ScreenHeight / 5 * 3;
+    self.cameraImgView = [[UIImageView alloc]initWithImage:self.cameraImage];
+    self.cameraImgView.frame = CGRectMake(0, 20, ScreenWidth, ScreenHeight);
+    [self.view addSubview:self.cameraImgView];
 }
 
 /**
@@ -99,6 +108,10 @@
     _isPlaying = NO;
     
     [self.player stop];
+    
+    if (self.isCamera) {
+        [self.player play];
+    }
 }
 
 - (void)startPlay{
@@ -237,6 +250,9 @@
     UIImageView *imageView = [[UIImageView alloc] init];
     CGFloat imageWidth = ScreenWidth;
     CGFloat imageHeight = 0;
+    if (self.isCamera) {
+        imageHeight = ScreenHeight / 5 * 3;
+    }
     if (self.coverImage) {
         imageHeight =
         imageWidth * (self.coverImage.size.height / self.coverImage.size.width);
@@ -253,7 +269,9 @@
     self.movieView.center = CGPointMake(ScreenWidth / 2,CGRectGetMaxY(self.backButton.frame) + 8 + imageHeight / 2);
     self.originFrame = self.movieView.frame;
     self.playFrame = CGRectMake(0, 0, ScreenWidth,  ScreenWidth * _config.outputSize.height / _config.outputSize.width);
-    
+    if (self.isCamera) {
+        self.playFrame = imageView.frame;
+    }
     //tap Gesture
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]init];
     [tap addTarget:self action:@selector(tap)];
@@ -285,6 +303,13 @@
     
     [self.containerView bringSubviewToFront:self.movieView];
     
+    if (self.cameraImage !=nil && self.isCamera) {
+        [self createCameraImageUI];
+        [self.view bringSubviewToFront:self.retryButton];
+        [self.view bringSubviewToFront:self.publishButton];
+    }else {
+        
+    }
     
 }
 
@@ -295,33 +320,55 @@
 
 //发布
 - (void)publish {
-    AliyunUploadSVideoInfo *info = [AliyunUploadSVideoInfo new];
-//    info.desc = self.titleView.text;
-//    if (info.desc) {
-//        NSInteger charLen = info.desc.length;
-//        if (charLen > 19) {
-//            [MBProgressHUD showMessage:NSLocalizedString(@"视频描述过长,应小于20个字符" , nil) inView:self.view];
-//            return;
-//        }
-//    }
-    
-    [[AlivcShortVideoPublishManager shared] setVideoPath:self.taskPath
-                                             videoConfig:self.config];
-    [[AlivcShortVideoPublishManager shared] setCoverImag:self.coverImage
-                                               videoInfo:info];
-    AlivcShortVideoPublishManager *manager = [AlivcShortVideoPublishManager shared];
-//    manager.mixVideoPath = [NSString stringWithFormat:@"%@.mp4", self.taskPath];
-    manager.mixVideoPath = self.videoPath;
-    [self.navigationController popToRootViewControllerAnimated:false];
-//    [self popToPlayVC];
+    if(self.isCamera) {
+        [self backToFlutter];
+        self.finishPublishBlock();
+    }else {
+            AliyunUploadSVideoInfo *info = [AliyunUploadSVideoInfo new];
+        //    info.desc = self.titleView.text;
+        //    if (info.desc) {
+        //        NSInteger charLen = info.desc.length;
+        //        if (charLen > 19) {
+        //            [MBProgressHUD showMessage:NSLocalizedString(@"视频描述过长,应小于20个字符" , nil) inView:self.view];
+        //            return;
+        //        }
+        //    }
+            
+            [[AlivcShortVideoPublishManager shared] setVideoPath:self.taskPath
+                                                     videoConfig:self.config];
+            [[AlivcShortVideoPublishManager shared] setCoverImag:self.coverImage
+                                                       videoInfo:info];
+            AlivcShortVideoPublishManager *manager = [AlivcShortVideoPublishManager shared];
+        //    manager.mixVideoPath = [NSString stringWithFormat:@"%@.mp4", self.taskPath];
+            manager.mixVideoPath = self.videoPath;
+            [self.navigationController popToRootViewControllerAnimated:false];
+        //    [self popToPlayVC];
+    }
+}
+
+- (void)backToFlutter {
+    if (![self.navigationController popViewControllerAnimated:YES]) {
+        [self dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+    }
+
 }
 
 
 //重拍
 - (void)retry {
-    for (UIViewController *temp in self.navigationController.viewControllers) {
-        if ([temp isKindOfClass:[AliyunMagicCameraViewController class]]) {
-            [self.navigationController popToViewController:temp animated:YES];
+    if (self.isCamera) {
+        if (![self.navigationController popViewControllerAnimated:YES]) {
+            [self dismissViewControllerAnimated:YES completion:^{
+                
+            }];
+        }
+    }else {
+        for (UIViewController *temp in self.navigationController.viewControllers) {
+            if ([temp isKindOfClass:[AliyunMagicCameraViewController class]]) {
+                [self.navigationController popToViewController:temp animated:YES];
+            }
         }
     }
 }

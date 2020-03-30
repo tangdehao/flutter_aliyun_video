@@ -43,6 +43,7 @@
 #import "NSString+AlivcHelper.h"
 
 #import <Photos/Photos.h>
+#import "AlivcPublishQuViewControl.h"
 
 @interface AliyunMagicCameraViewController ()<AliyunIRecorderDelegate,AlivcRecordBottomViewDelegate,
 AlivcRecordNavigationBarDelegate,AliyunMusicPickViewControllerDelegate,
@@ -612,11 +613,22 @@ AlivcRecordPasterViewDelegate>
 
                     if (contentEditingInput.fullSizeImageURL) {
                         NSString *path = [contentEditingInput.fullSizeImageURL relativePath];
+                        //照片拍摄完成
                         if (weakSelf.finishBlock) {
-                            NSString *type = [NSString stringWithFormat:@"%ld", weakSelf.touchMode];
-                            NSDictionary *dict = @{@"filePath":path, @"fileType": type};
-                            weakSelf.finishBlock(dict);
-                            [weakSelf backToFlutter];
+                            AlivcPublishQuViewControl *publishVC = [[AlivcPublishQuViewControl alloc]init];
+                            publishVC.cameraImage = image;
+                            publishVC.isCamera = YES;
+                            [weakSelf presentViewController:publishVC animated:YES completion:nil];
+                            publishVC.finishPublishBlock = ^{
+                                NSString *type = [NSString stringWithFormat:@"%ld", weakSelf.touchMode];
+                                NSDictionary *dict = @{@"filePath":path, @"fileType": type};
+                                weakSelf.finishBlock(dict);
+                                [weakSelf backToFlutter];
+                            };
+//                            NSString *type = [NSString stringWithFormat:@"%ld", weakSelf.touchMode];
+//                            NSDictionary *dict = @{@"filePath":path, @"fileType": type};
+//                            weakSelf.finishBlock(dict);
+//                            [weakSelf backToFlutter];
                         }
                     }
 
@@ -720,6 +732,7 @@ AlivcRecordPasterViewDelegate>
 }
 
 - (void)recorderDidFinishRecording{
+    __weak typeof(self)weakSelf = self;
     NSLog(@"----完成录制");
 //    UISaveVideoAtPathToSavedPhotosAlbum(_recorder.outputPath, self, nil, nil);
     [self updateViewsStatus];
@@ -729,10 +742,18 @@ AlivcRecordPasterViewDelegate>
     //跳转处理
     NSString *outputPath = self.recorder.outputPath;
     if (self.finishBlock) {
-        NSString *type = [NSString stringWithFormat:@"%ld", self.touchMode];
-        NSDictionary *dict = @{@"filePath":outputPath, @"fileType": type};
-        self.finishBlock(dict);
-        [self backToFlutter];
+        //视频录制完成
+        AlivcPublishQuViewControl *publishVC = [[AlivcPublishQuViewControl alloc]init];
+        publishVC.videoPath = self.recorder.taskPath;
+        publishVC.taskPath = self.recorder.taskPath;
+        publishVC.isCamera = YES;
+        [self presentViewController:publishVC animated:YES completion:nil];
+        publishVC.finishPublishBlock = ^{
+            NSString *type = [NSString stringWithFormat:@"%ld", self.touchMode];
+            NSDictionary *dict = @{@"filePath":outputPath, @"fileType": type};
+            weakSelf.finishBlock(dict);
+            [weakSelf backToFlutterWithoutAnimation];
+        };
     }else{
         [[AlivcShortVideoRoute shared]registerEditVideoPath:outputPath];
         [[AlivcShortVideoRoute shared]registerEditMediasPath:nil];
@@ -1007,6 +1028,15 @@ AlivcRecordPasterViewDelegate>
 - (void)backToFlutter {
     if (![self.navigationController popViewControllerAnimated:YES]) {
         [self dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+    }
+
+}
+
+- (void)backToFlutterWithoutAnimation {
+    if (![self.navigationController popViewControllerAnimated:NO]) {
+        [self dismissViewControllerAnimated:NO completion:^{
             
         }];
     }
