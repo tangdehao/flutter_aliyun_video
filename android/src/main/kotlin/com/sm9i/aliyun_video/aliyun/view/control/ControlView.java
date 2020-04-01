@@ -37,8 +37,7 @@ import java.util.List;
  * <p>
  * 更换录制为 拍照
  */
-public class ControlView extends RelativeLayout implements View.OnTouchListener
-{
+public class ControlView extends RelativeLayout implements View.OnTouchListener {
     private static final String TAG = ControlView.class.getSimpleName();
     private static final int MAX_ITEM_COUNT = 5;
     //美颜和gif
@@ -177,9 +176,9 @@ public class ControlView extends RelativeLayout implements View.OnTouchListener
         aliyunSwitchCamera.setImageDrawable(getSwitchCameraDrawable());
         List<String> strings = new ArrayList<>(2);
 
-        strings.add("Photo");
+        strings.add(getResources().getString(R.string.tab_photo));
 
-        strings.add("Video");
+        strings.add(getResources().getString(R.string.tab_video));
         mPickerView.setData(strings);
 
         //向上的三角形对应的图片
@@ -1011,7 +1010,7 @@ public class ControlView extends RelativeLayout implements View.OnTouchListener
     public void setRecordType(Boolean recordType) {
         mRecorderType = recordType;
         if (mRecorderType) {
-            mPickerView.setData(Collections.singletonList("Video"));
+            mPickerView.setData(Collections.singletonList(getResources().getString(R.string.tab_video)));
         }
         updateTittleView();
     }
