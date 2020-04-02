@@ -242,5 +242,7 @@
     <string name="tab_photo">Photo</string>
     <string name="tab_video">Video</string>
 
+    <string name="video_to_long_60">Video cannot be longer than 60 seconds</string>
+
 
 </resources>

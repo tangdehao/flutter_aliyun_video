@@ -60,7 +60,7 @@ public class AlivcMixMediaActivity extends AppCompatActivity implements View.OnC
      * 目前支持 2秒-30秒之内的视频
      */
     private static final int MIN_VIDEO_DURATION = 2000;
-    private static final int MAX_VIDEO_DURATION = 3 * 10000;
+    private static final int MAX_VIDEO_DURATION = 6 * 10000;
     private static final int IMAGE_DURATION = 3000;//图片代表的时长
     private VideoDisplayMode cropMode = VideoDisplayMode.FILL;
     private MediaStorage mStorage;
@@ -211,7 +211,7 @@ public class AlivcMixMediaActivity extends AppCompatActivity implements View.OnC
         mThumbnailGenerator = new ThumbnailGenerator(this);
         GalleryDirChooser galleryDirChooser = new GalleryDirChooser(this, findViewById(R.id.topPanel),
                 mThumbnailGenerator, mStorage);
-        mGalleryMediaChooser = new GalleryMediaChooser(galleryView, galleryDirChooser, mStorage, mThumbnailGenerator);
+        mGalleryMediaChooser = new GalleryMediaChooser(galleryView, galleryDirChooser, mStorage, mThumbnailGenerator, this);
         mStorage.setVideoDurationRange(MIN_VIDEO_DURATION, MAX_VIDEO_DURATION);
 
         int sortMode = MediaStorage.SORT_MODE_VIDEO;
@@ -334,7 +334,7 @@ public class AlivcMixMediaActivity extends AppCompatActivity implements View.OnC
     /**
      * 开启录制
      *
-     * @param activity          上下文
+     * @param activity         上下文
      * @param recordInputParam 录制输入参数
      */
     public static void startRecord(Activity activity, AlivcRecordInputParam recordInputParam) {

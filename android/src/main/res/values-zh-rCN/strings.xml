@@ -311,5 +311,7 @@
     <string name="alivc_editor_effect_text_color">填充</string>
     <!--end-->
 
+    <string name="video_to_long_60">视频不能超过60秒</string>
+
 
 </resources>

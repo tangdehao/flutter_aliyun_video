@@ -4,6 +4,7 @@
 
 package com.sm9i.aliyun_video.aliyun.media;
 
+import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,15 +14,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import com.aliyun.common.utils.ToastUtil;
 import com.sm9i.aliyun_video.R;
 
 public class GalleryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
-    implements View.OnClickListener {
+        implements View.OnClickListener {
 
     public interface OnItemClickListener {
         /**
          * item click listener
-         * @param adapter GalleryAdapter
+         *
+         * @param adapter         GalleryAdapter
          * @param adapterPosition adapterPosition
          * @return
          */
@@ -31,13 +34,15 @@ public class GalleryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private static final int TYPE_ITEM_DRAFT = 0;
     private static final int TYPE_ITEM_MEDIA = 1;
     private List<MediaInfo> medias;
-//    private boolean hasDraft;
+    //    private boolean hasDraft;
     private int draftCount;
     private ThumbnailGenerator thumbnailGenerator;
     private OnItemClickListener onItemClickListener;
+    private Context context;
 
-    public GalleryAdapter(ThumbnailGenerator thumbnailGenerator) {
+    public GalleryAdapter(ThumbnailGenerator thumbnailGenerator, Context context) {
         this.thumbnailGenerator = thumbnailGenerator;
+        this.context = context;
     }
 
     public void setData(List<MediaInfo> list) {
@@ -70,8 +75,8 @@ public class GalleryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         RecyclerView.ViewHolder holder;
 
         holder = new GalleryItemViewHolder(
-            LayoutInflater.from(parent.getContext()).inflate(
-                R.layout.alivc_media_item_gallery_media, parent, false), thumbnailGenerator);
+                LayoutInflater.from(parent.getContext()).inflate(
+                        R.layout.alivc_media_item_gallery_media, parent, false), thumbnailGenerator);
 
         holder.itemView.setOnClickListener(this);
         return holder;
@@ -81,7 +86,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         boolean actived = activeAdapterPosition == position;
 
-        ((GalleryItemViewHolder)holder).onBind(getItem(position), actived);
+        ((GalleryItemViewHolder) holder).onBind(getItem(position), actived);
 
     }
 
@@ -112,6 +117,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     private int activeAdapterPosition = 0;
+
     private void setActiveAdapterItem(int adapterPos) {
         int oldAdapterPos = activeAdapterPosition;
         if (oldAdapterPos == adapterPos) {
@@ -146,6 +152,11 @@ public class GalleryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public void onClick(View v) {
         RecyclerView.ViewHolder holder = (RecyclerView.ViewHolder) v.getTag();
         int adapterPos = holder.getAdapterPosition();
+        if (medias.get(adapterPos).duration / 1000 > 60) {
+            ToastUtil.showToast(context, R.string.video_to_long_60);
+            return;
+        }
+
 
         if (onItemClickListener != null) {
             Log.d("active", "onItemClick");

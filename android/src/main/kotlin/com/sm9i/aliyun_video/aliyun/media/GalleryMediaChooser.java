@@ -4,6 +4,7 @@
 
 package com.sm9i.aliyun_video.aliyun.media;
 
+import android.content.Context;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -23,13 +24,13 @@ public class GalleryMediaChooser {
 
     public GalleryMediaChooser(RecyclerView gallery,
                                final GalleryDirChooser dirChooser,
-                               MediaStorage storage, ThumbnailGenerator thumbnailGenerator) {
+                               MediaStorage storage, ThumbnailGenerator thumbnailGenerator, Context context) {
         this.mGallery = gallery;
         mGallery.addItemDecoration(new GalleryItemDecoration());
         this.mStorage = storage;
-        adapter = new GalleryAdapter(thumbnailGenerator);
+        adapter = new GalleryAdapter(thumbnailGenerator, context);
         gallery.setLayoutManager(new WrapContentGridLayoutManager(gallery.getContext(),
-                                 4, GridLayoutManager.VERTICAL, false));
+                4, GridLayoutManager.VERTICAL, false));
         gallery.setAdapter(adapter);
 //        adapter.addDraftItem();
         adapter.setData(storage.getMedias());
@@ -53,6 +54,7 @@ public class GalleryMediaChooser {
         adapter.setOnItemClickListener(new GalleryAdapter.OnItemClickListener() {
             @Override
             public boolean onItemClick(GalleryAdapter adapter, int adapterPosition) {
+
                 if (adapter.getItemCount() > adapterPosition) {
                     MediaInfo info = adapter.getItem(adapterPosition);
                     if (info == null) {
@@ -65,7 +67,6 @@ public class GalleryMediaChooser {
                 return true;
             }
         });
-
 
 
         mGallery.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -98,7 +99,7 @@ public class GalleryMediaChooser {
 
     private void selectedFirstMediaOnAll(List<MediaInfo> list) {
         if (list.size() == 0) {
-            return ;
+            return;
         }
         MediaInfo info = list.get(0);
 //        mStorage.setCurrentDisplayMediaData(info);
