@@ -59,8 +59,8 @@ public class AlivcMixMediaActivity extends AppCompatActivity implements View.OnC
     /**
      * 目前支持 2秒-30秒之内的视频
      */
-    private static final int MIN_VIDEO_DURATION = 2000;
-    private static final int MAX_VIDEO_DURATION = 6 * 10000;
+    private static int MIN_VIDEO_DURATION = 2000;
+    private static int MAX_VIDEO_DURATION = 60 * 1000;
     private static final int IMAGE_DURATION = 3000;//图片代表的时长
     private VideoDisplayMode cropMode = VideoDisplayMode.FILL;
     private MediaStorage mStorage;
@@ -169,6 +169,10 @@ public class AlivcMixMediaActivity extends AppCompatActivity implements View.OnC
     }
 
     private void getData() {
+        MAX_VIDEO_DURATION = getIntent().getIntExtra(AlivcRecordInputParam.INTENT_KEY_MAX_DURATION, 60 * 1000);
+        MIN_VIDEO_DURATION = getIntent().getIntExtra(AlivcRecordInputParam.INTENT_KEY_MIN_DURATION, 2 * 1000);
+
+
         /**
          * 录制参数
          */
