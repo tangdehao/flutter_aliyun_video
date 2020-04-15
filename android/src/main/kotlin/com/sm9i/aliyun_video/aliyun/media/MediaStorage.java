@@ -14,7 +14,9 @@ import android.os.AsyncTask;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Log;
 
+import com.aliyun.common.utils.ToastUtil;
 import com.aliyun.jasonparse.JSONSupport;
 import com.sm9i.aliyun_video.R;
 import com.sm9i.aliyun_video.aliyun.common.utils.FileUtils;
@@ -81,6 +83,7 @@ public class MediaStorage {
             ToastUtils.show(context, R.string.alivc_media_sdcard_not_ready);
         }
     }
+
     public void setSortMode(int sortMode) {
         this.sortMode = sortMode;
     }
@@ -338,7 +341,7 @@ public class MediaStorage {
         protected void onPreExecute() {
             super.onPreExecute();
             if (Environment.getExternalStorageState().equals(
-                        Environment.MEDIA_MOUNTED)) {
+                    Environment.MEDIA_MOUNTED)) {
                 readMediaFromCache();
             }
         }
@@ -359,39 +362,40 @@ public class MediaStorage {
         protected Void doInBackground(Void... params) {
 //            if (Environment.getExternalStorageState().equals(
 //                    Environment.MEDIA_MOUNTED)) {
+
             Cursor videoCursor = null;
             if (sortMode == SORT_MODE_MERGE || sortMode == SORT_MODE_VIDEO) {
-                videoCursor = mResolver.query(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, new String[] {
-                                                  MediaStore.Video.Media.DATA,
-                                                  MediaStore.Video.Media._ID,
-                                                  MediaStore.Video.Media.TITLE,
-                                                  MediaStore.Video.Media.MIME_TYPE,
-                                                  MediaStore.Video.Media.DURATION,
-                                                  MediaStore.Video.Media.DATE_ADDED,
-                                              }, String.format("%1$s IN (?, ?, ? ,?,?,?,?) AND %2$s > %3$d AND %2$s < %4$d",
-                                                      MediaStore.Video.Media.MIME_TYPE,
-                                                      MediaStore.Video.Media.DURATION, mMinVideoDuration, mMaxVideoDuration), new String[] {
-                                                  "video/mp4",
-                                                  "video/ext-mp4",
-                                                  "video/quicktime",//部分oppo手机会记录这个mp4的格式
-                                                  "video/x-flv",
-                                                  "video/flv",
-                                                  /* MEIZU 5.0 */
-                                                  "video/3gpp",
-                                                  "video/mov"
-                                              }, MediaStore.Video.Media.DATE_ADDED + " DESC");
+                videoCursor = mResolver.query(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, new String[]{
+                        MediaStore.Video.Media.DATA,
+                        MediaStore.Video.Media._ID,
+                        MediaStore.Video.Media.TITLE,
+                        MediaStore.Video.Media.MIME_TYPE,
+                        MediaStore.Video.Media.DURATION,
+                        MediaStore.Video.Media.DATE_ADDED,
+                }, String.format("%1$s IN (?, ?, ? ,?,?,?,?) AND %2$s > %3$d AND %2$s < %4$d",
+                        MediaStore.Video.Media.MIME_TYPE,
+                        MediaStore.Video.Media.DURATION, mMinVideoDuration, mMaxVideoDuration), new String[]{
+                        "video/mp4",
+                        "video/ext-mp4",
+                        "video/quicktime",//部分oppo手机会记录这个mp4的格式
+                        "video/x-flv",
+                        "video/flv",
+                        /* MEIZU 5.0 */
+                        "video/3gpp",
+                        "video/mov"
+                }, MediaStore.Video.Media.DATE_ADDED + " DESC");
             }
             Cursor imageCursor = null;
             if (sortMode == SORT_MODE_MERGE || sortMode == SORT_MODE_PHOTO) {
-                imageCursor = mResolver.query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, new String[] {
-                                                  MediaStore.Images.Media.DATA,
-                                                  MediaStore.Images.Media._ID,
-                                                  MediaStore.Images.Media.TITLE,
-                                                  MediaStore.Images.Media.MIME_TYPE,
-                                                  MediaStore.Images.Media.DATE_ADDED,
-                                              }, null,
-                                              null,
-                                              MediaStore.Images.Media.DATE_ADDED + " DESC");
+                imageCursor = mResolver.query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, new String[]{
+                                MediaStore.Images.Media.DATA,
+                                MediaStore.Images.Media._ID,
+                                MediaStore.Images.Media.TITLE,
+                                MediaStore.Images.Media.MIME_TYPE,
+                                MediaStore.Images.Media.DATE_ADDED,
+                        }, null,
+                        null,
+                        MediaStore.Images.Media.DATE_ADDED + " DESC");
             }
             int totalCount = (videoCursor == null ? 0 : videoCursor.getCount()) + (imageCursor == null ? 0 : imageCursor.getCount());
 
@@ -520,16 +524,16 @@ public class MediaStorage {
 
         videoInfo.addTime = cursor.getLong(colDateAdded);
         Cursor thumbCursor = resolver.query(MediaStore.Video.Thumbnails.EXTERNAL_CONTENT_URI,
-                                            new String[] {
-                                                MediaStore.Video.Thumbnails.DATA,
-                                                MediaStore.Video.Thumbnails.VIDEO_ID
-                                            },
-                                            MediaStore.Video.Thumbnails.VIDEO_ID + "=?",
-                                            new String[] {String.valueOf(videoInfo.id)}, null);
+                new String[]{
+                        MediaStore.Video.Thumbnails.DATA,
+                        MediaStore.Video.Thumbnails.VIDEO_ID
+                },
+                MediaStore.Video.Thumbnails.VIDEO_ID + "=?",
+                new String[]{String.valueOf(videoInfo.id)}, null);
 
         if (thumbCursor.moveToFirst()) {
             videoInfo.thumbnailPath = thumbCursor.getString(
-                                          thumbCursor.getColumnIndexOrThrow(MediaStore.Video.Thumbnails.DATA));
+                    thumbCursor.getColumnIndexOrThrow(MediaStore.Video.Thumbnails.DATA));
         }
         thumbCursor.close();
 
@@ -554,19 +558,19 @@ public class MediaStorage {
 
         mediaInfo.addTime = cursor.getLong(colDateAdded);
         Cursor thumbCursor = resolver.query(MediaStore.Images.Thumbnails.EXTERNAL_CONTENT_URI,
-                                            new String[] {
-                                                MediaStore.Images.Thumbnails.DATA,
-                                                MediaStore.Images.Thumbnails.IMAGE_ID
-                                            },
-                                            MediaStore.Images.Thumbnails.IMAGE_ID + "=?",
-                                            new String[] {String.valueOf(mediaInfo.id)}, null);
+                new String[]{
+                        MediaStore.Images.Thumbnails.DATA,
+                        MediaStore.Images.Thumbnails.IMAGE_ID
+                },
+                MediaStore.Images.Thumbnails.IMAGE_ID + "=?",
+                new String[]{String.valueOf(mediaInfo.id)}, null);
         if (thumbCursor.getCount() == 0) {
             thumbCursor.close();
             thumbCursor = createThumbnailAndRequery(mediaInfo, resolver);
         }
         if (thumbCursor.moveToFirst()) {
             String thumbPath = thumbCursor.getString(
-                                   thumbCursor.getColumnIndexOrThrow(MediaStore.Images.Thumbnails.DATA));
+                    thumbCursor.getColumnIndexOrThrow(MediaStore.Images.Thumbnails.DATA));
             mediaInfo.thumbnailPath = thumbPath;
             checkIfNeedToRotateThumbnail(mediaInfo.filePath, thumbPath);
         }
@@ -598,12 +602,12 @@ public class MediaStorage {
         MediaStore.Images.Thumbnails.getThumbnail(resolver,
                 info.id, MediaStore.Images.Thumbnails.MICRO_KIND, options);
         Cursor thumbCursor = resolver.query(MediaStore.Images.Thumbnails.EXTERNAL_CONTENT_URI,
-                                            new String[] {
-                                                MediaStore.Images.Thumbnails.DATA,
-                                                MediaStore.Images.Thumbnails.IMAGE_ID
-                                            },
-                                            MediaStore.Images.Thumbnails.IMAGE_ID + "=?",
-                                            new String[] {String.valueOf(info.id)}, null);
+                new String[]{
+                        MediaStore.Images.Thumbnails.DATA,
+                        MediaStore.Images.Thumbnails.IMAGE_ID
+                },
+                MediaStore.Images.Thumbnails.IMAGE_ID + "=?",
+                new String[]{String.valueOf(info.id)}, null);
         return thumbCursor;
     }
 
@@ -621,7 +625,7 @@ public class MediaStorage {
             dirInfo.dirName = dirName;
             dirInfo.thumbnailUrl = info.thumbnailPath;
             dirInfo.videoDirPath = info.filePath.substring(0,
-                                   info.filePath.lastIndexOf("/"));
+                    info.filePath.lastIndexOf("/"));
             if (dirs.size() == 0) {
                 MediaDir all = new MediaDir();
                 all.thumbnailUrl = info.thumbnailPath;
@@ -671,6 +675,6 @@ public class MediaStorage {
     public void setVideoDurationRange(int min, int max) {
         this.mMinVideoDuration = min;
         this.mMaxVideoDuration = max;
-
+        Log.i("wwwwww", "mMaxVideoDuration" + max);
     }
 }
