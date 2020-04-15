@@ -83,9 +83,14 @@
 }
 
 - (void)createCameraImageUI {
-    CGFloat imageHeight = ScreenHeight / 5 * 3;
+//    CGFloat imageHeight = ScreenHeight / 5 * 3;
+    CGFloat scale = [UIScreen mainScreen].scale;
+    CGFloat statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
+    CGFloat fixelW = CGImageGetWidth(self.cameraImage.CGImage)/scale;
+    CGFloat fixelH = CGImageGetHeight(self.cameraImage.CGImage)/scale;
+    CGFloat fixelX = (ScreenWidth-fixelW)/2;
     self.cameraImgView = [[UIImageView alloc]initWithImage:self.cameraImage];
-    self.cameraImgView.frame = CGRectMake(0, 20, ScreenWidth, ScreenHeight);
+    self.cameraImgView.frame = CGRectMake(fixelX, statusHeight, fixelW, fixelH);
     [self.view addSubview:self.cameraImgView];
 }
 

@@ -17,7 +17,7 @@ PODS:
   - AlivcConan (1.0.2):
     - AlivcConan/AlivcConan (= 1.0.2)
   - AlivcConan/AlivcConan (1.0.2)
-  - aliyun_video (0.1.1):
+  - aliyun_video (0.1.2):
     - AFNetworking
     - AlivcConan
     - AliyunOSSiOS
@@ -136,7 +136,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   AlivcConan: df8627643b3794c329e4c8eb894428610be83e88
-  aliyun_video: bd778fd08ee9a39841fed94c30af28147223a938
+  aliyun_video: e259e160416f4f1c5a0d27114281aab3ac2ec4a1
   AliyunOSSiOS: 8db92936545593b9e5c66d680ef2ac0738946651
   AliyunVideoSDKStd: a03f23db435088e564baefb074ce2b70973f8992
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
@@ -157,6 +157,6 @@ SPEC CHECKSUMS:
   VODUpload: a76d07081e4faf9bd9e7535265901cde2cea507f
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: 0fa8b388e4785a5b1e78d972c89c64d5d606014a
+PODFILE CHECKSUM: 7dba12dbbeed25f54c2cc79b745449a55626fe5a
 
 COCOAPODS: 1.8.3
