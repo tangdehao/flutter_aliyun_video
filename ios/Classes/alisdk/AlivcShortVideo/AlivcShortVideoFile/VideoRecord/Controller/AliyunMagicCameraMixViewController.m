@@ -8,7 +8,7 @@
 
 #import "AliyunMagicCameraMixViewController.h"
 //合拍
-#import <AliyunVideoSDKPro/AliyunMixRecorder.h> 
+#import <AliyunVideoSDKPro/AliyunMixRecorder.h>
 #import "AliyunPathManager.h"
 #import "MBProgressHUD+AlivcHelper.h"
 #import <sys/utsname.h>

@@ -99,6 +99,7 @@ AlivcRecordPasterViewDelegate>
     if (self.isMixedViedo) {
         [_navigationBar setFinishButtonHidden:true];
     }
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -143,6 +144,12 @@ AlivcRecordPasterViewDelegate>
     //默认值设置
     self.shouldStartPreviewWhenActive = NO;
     self.recorderDuration = 0;
+    
+    if (@available(iOS 13.0, *)) {
+        self.modalPresentationStyle = UIModalPresentationFullScreen;
+    } else {
+        // Fallback on earlier versions
+    }
 }
 - (void)setupSubviews{
     if (!_uiConfig) {
@@ -618,6 +625,11 @@ AlivcRecordPasterViewDelegate>
                             AlivcPublishQuViewControl *publishVC = [[AlivcPublishQuViewControl alloc]init];
                             publishVC.cameraImage = image;
                             publishVC.isCamera = YES;
+                            if (@available(iOS 13.0, *)) {
+                                publishVC.modalPresentationStyle = UIModalPresentationFullScreen;
+                            } else {
+                                // Fallback on earlier versions
+                            }
                             [weakSelf presentViewController:publishVC animated:YES completion:nil];
                             publishVC.finishPublishBlock = ^{
                                 NSString *type = [NSString stringWithFormat:@"%ld", weakSelf.touchMode];
@@ -747,6 +759,11 @@ AlivcRecordPasterViewDelegate>
         publishVC.videoPath = self.recorder.taskPath;
         publishVC.taskPath = self.recorder.taskPath;
         publishVC.isCamera = YES;
+        if (@available(iOS 13.0, *)) {
+            publishVC.modalPresentationStyle = UIModalPresentationFullScreen;
+        } else {
+            // Fallback on earlier versions
+        }
         [self presentViewController:publishVC animated:YES completion:nil];
         publishVC.finishPublishBlock = ^{
             NSString *type = [NSString stringWithFormat:@"%ld", self.touchMode];
