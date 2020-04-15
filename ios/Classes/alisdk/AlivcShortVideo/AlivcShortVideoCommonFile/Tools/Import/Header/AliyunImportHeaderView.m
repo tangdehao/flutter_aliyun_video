@@ -75,7 +75,7 @@
 - (UIButton *)buttonCancel {
     if (!_buttonCancel) {
         _buttonCancel = [UIButton buttonWithType:UIButtonTypeCustom];
-        _buttonCancel.frame = CGRectMake(0, 20, 44, 44);
+        _buttonCancel.frame = CGRectMake(0, 20, 64, 44);
         [_buttonCancel setTitleColor:[UIColor whiteColor] forState:0];
         [_buttonCancel setTitle:NSLocalizedString(@"取消", nil) forState:0];
         [_buttonCancel addTarget:self action:@selector(buttonCancelClick) forControlEvents:UIControlEventTouchUpInside];
