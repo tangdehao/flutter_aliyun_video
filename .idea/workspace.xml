@@ -6,14 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="5383e202-7e2b-45f7-b13b-aaac979841c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/AlivcMixMediaActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/activity/AlivcMixMediaActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/media/GalleryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/media/GalleryAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/media/GalleryMediaChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/media/GalleryMediaChooser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/values-en-rNZ/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values-en-rNZ/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/values-en-rUS/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values-en-rUS/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/values-zh-rCN/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values-zh-rCN/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/media/MediaStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/sm9i/aliyun_video/aliyun/media/MediaStorage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/android/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/lib/aliyun_video.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/aliyun_video/lib/aliyun_video.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/aliyun_video.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/aliyun_video.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

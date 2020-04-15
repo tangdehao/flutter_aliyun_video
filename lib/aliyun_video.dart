@@ -47,7 +47,7 @@ class AliyunVideo {
 
   static Future<AliyunResult> startCooperationVideo({
     int mResolutionMode = ResolutionMode.DEFAULT_RESOLUTION_720P,
-    int mMaxDuration = 15 * 1000,
+    int mMaxDuration = 60 * 1000,
     int mMinDuration = 2 * 1000,
     int mRatioMode = RatioMode.DEFAULT_RATIO_MODE_9_16,
     int mGop = 250,
