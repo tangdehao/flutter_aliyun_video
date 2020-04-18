@@ -261,7 +261,7 @@ public class AlivcRecorder implements AlivcIMixRecorderInterface {
 
     @Override
     public void takePicture(boolean needBitmap) {
-        mRecorder.takePicture(needBitmap);
+        mRecorder.takePhoto(needBitmap);
     }
 
     /**
