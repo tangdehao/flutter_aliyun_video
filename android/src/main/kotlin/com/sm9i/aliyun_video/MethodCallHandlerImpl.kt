@@ -85,6 +85,7 @@ class MethodCallHandlerImpl(private var activity: Activity, messenger: BinaryMes
             param.resolutionMode = it
         }
         call.argument<Int>(AlivcRecordInputParam.INTENT_KEY_MAX_DURATION)?.let {
+            Log.i("wwwwww", "$it")
             param.maxDuration = it
         }
         call.argument<Int>(AlivcRecordInputParam.INTENT_KEY_MIN_DURATION)?.let {

@@ -712,7 +712,8 @@ public class AliyunSVideoRecordView extends FrameLayout
         addSubView(mControlView);
         mControlView.setAspectRatio(mRatioMode);
     }
-    public void delete(){
+
+    public void delete() {
         if (isStopToCompleteDuration) {
             // 这里是因为如果 SDK 还没有回调onComplete,点击回删会出现删除的不是最后一段的问题
             return;
@@ -1733,7 +1734,13 @@ public class AliyunSVideoRecordView extends FrameLayout
     public void destroyRecorder() {
 
         //destroy时删除多段录制的片段文件
-        deleteSliceFile();
+        //子线程
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                deleteSliceFile();
+            }
+        });
         if (finishRecodingTask != null) {
             finishRecodingTask.cancel(true);
             finishRecodingTask = null;

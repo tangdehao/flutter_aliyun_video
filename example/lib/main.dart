@@ -74,7 +74,7 @@ class _MyAppState extends State<MyApp> {
               RaisedButton(
                 onPressed: () async {
                   if (hasPermissions) {
-                    AliyunVideo.startCooperationVideo(mMaxDuration: 60).then((res) {
+                    AliyunVideo.startCooperationVideo().then((res) {
                       this.res = res;
                     });
                   } else {
