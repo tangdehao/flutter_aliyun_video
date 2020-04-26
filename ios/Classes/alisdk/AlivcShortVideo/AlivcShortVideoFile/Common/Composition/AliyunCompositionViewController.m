@@ -204,6 +204,8 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 - (void)setupSubviews {
+    CGFloat tipsHeight = 40;
+    
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = RGBToColor(35, 42, 66);
     CGFloat top =  IS_IPHONEX ? 24 : 0;
@@ -218,7 +220,7 @@
     layout.minimumLineSpacing = 3;
     layout.minimumInteritemSpacing = 3;
     self.collectionView = [[UICollectionView alloc] initWithFrame:
-                           CGRectMake(0, 64+top, ScreenWidth, ScreenHeight-64-140-SafeBottom-top) collectionViewLayout:layout];
+                           CGRectMake(0, 64+top+tipsHeight, ScreenWidth, ScreenHeight-64-140-SafeBottom-top) collectionViewLayout:layout];
     self.collectionView.backgroundColor = RGBToColor(35, 42, 66);
     [self.collectionView registerClass:[AliyunCompositionCell class] forCellWithReuseIdentifier:@"AliyunCompositionCell"];
     self.collectionView.alwaysBounceVertical = YES;
@@ -229,6 +231,11 @@
     self.pickView = [[AliyunCompositionPickView alloc] initWithFrame:CGRectMake(0, ScreenHeight-140-SafeBottom, ScreenWidth, 140)];
     self.pickView.delegate = self;
     [self.view addSubview:self.pickView];
+    
+    UILabel *tipsLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 64+top+5, ScreenWidth-20, 30)];
+    tipsLabel.text = @"Only display videos shorter than 30 seconds";
+    tipsLabel.font = [UIFont systemFontOfSize:16];
+    [self.view addSubview:tipsLabel];
 }
 
 
@@ -286,6 +293,8 @@
         [weakSelf.collectionView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
     }];
 }
+
+
 
 #pragma mark - pick view
 

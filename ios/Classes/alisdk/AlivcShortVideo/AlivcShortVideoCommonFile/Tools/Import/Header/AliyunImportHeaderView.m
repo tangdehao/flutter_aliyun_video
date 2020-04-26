@@ -65,13 +65,14 @@
         _buttonTitle.bounds = CGRectMake(0, 0, 180, 44);
         _buttonTitle.center = CGPointMake(ScreenWidth / 2, 42);
         [_buttonTitle setTitleColor:[UIColor whiteColor] forState:0];
-        UIImage *image = [AlivcImage imageNamed:@"baan-jiantou"];
+        UIImage *image = [AlivcImage imageNamed:@"baan_jiantouxia"];
         if (image) {
             [_buttonTitle setImage:image forState:0];
         }else {
             NSLog(@"nil");
         }
-        
+//        [_buttonTitle setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+//        _buttonTitle.imageView.contentMode = UIViewContentModeScaleAspectFit;
         [_buttonTitle addTarget:self action:@selector(buttonTitleClick) forControlEvents:UIControlEventTouchUpInside];
         _buttonTitle.titleLabel.font = [UIFont systemFontOfSize:14];
     }
@@ -81,7 +82,7 @@
 - (UIButton *)buttonCancel {
     if (!_buttonCancel) {
         _buttonCancel = [UIButton buttonWithType:UIButtonTypeCustom];
-        _buttonCancel.frame = CGRectMake(0, 20, 64, 44);
+        _buttonCancel.frame = CGRectMake(0, 20, 84, 44);
         [_buttonCancel setTitleColor:[UIColor whiteColor] forState:0];
         [_buttonCancel setTitle:NSLocalizedString(@"取消", nil) forState:0];
         [_buttonCancel addTarget:self action:@selector(buttonCancelClick) forControlEvents:UIControlEventTouchUpInside];
