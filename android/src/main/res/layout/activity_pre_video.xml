@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/alivc_common_theme_primary"
+    tools:context=".aliyun.activity.PreVideoActivity">
+
+    <LinearLayout
+        android:id="@+id/bar_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/action_bar"
+            layout="@layout/alivc_editor_include_action_bar_profile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alivc_common_height_tittle_64" />
+
+        <com.sm9i.aliyun_video.aliyun.editor.thumb.OverlayThumbLineBar
+            android:id="@+id/simplethumblinebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar_linear" />
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar_linear"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/alivc_common_bg_black" />
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/alivc_svideo_btn_player_margin_b"
+        android:background="@drawable/alivc_svideo_shap_player_bg"
+        android:paddingLeft="@dimen/alivc_svideo_btn_radius">
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/aliyun_svideo_pause" />
+
+        <TextView
+            android:id="@+id/play_button"
+            android:layout_width="@dimen/alivc_svideo_btn_player_width"
+            android:layout_height="@dimen/alivc_svideo_btn_player_height"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="@string/alivc_editor_edit_play_pause"
+            android:textColor="@color/alivc_common_font_white"
+            android:textSize="@dimen/alivc_common_font_11" />
+    </LinearLayout>
+
+
+</RelativeLayout>

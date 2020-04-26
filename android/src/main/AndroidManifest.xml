@@ -38,6 +38,11 @@
             android:name=".aliyun.activity.PreViewActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AlivcRecordUIStyle" />
+        <activity
+
+            android:name=".aliyun.activity.PreVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AlivcRecordUIStyle" />
     </application>
 
 </manifest>

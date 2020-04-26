@@ -56,58 +56,60 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Builder(
-          builder: (context) => ListView(
-            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-            children: <Widget>[
-              RaisedButton(
-                onPressed: () async {
-                  if (hasPermissions) {
-                    AliyunVideo.startCamera(mCreateType: 1).then((re) {
-                      this.res = re;
-                    });
-                  } else {
-                    checkPermission();
-                  }
-                },
-                child: Text('take camera'),
-              ),
-              RaisedButton(
-                onPressed: () async {
-                  if (hasPermissions) {
-                    AliyunVideo.startCooperationVideo().then((res) {
-                      this.res = res;
-                    });
-                  } else {
-                    checkPermission();
-                  }
-                },
-                child: Text('take CooperationVideo'),
-              ),
-              RaisedButton(
-                onPressed: () async {
-                  if (res != null) {
-                    if (res.fileType == 0) {
-                      Navigator.push(
-                          context,
-                          new MaterialPageRoute(
-                              builder: (_) => VideoPlayerPage(res.filePath)));
-                    } else {
-                      setState(() {});
-                    }
-                  }
-                },
-                child: Text('play'),
-              ),
-              if (res != null && res.fileType == 1)
-                Container(
-                  child: Image.file(
-                    File(
-                      res.filePath,
-                    ),
+          builder: (context) =>
+              ListView(
+                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                children: <Widget>[
+                  RaisedButton(
+                    onPressed: () async {
+                      if (hasPermissions) {
+                        AliyunVideo.startCamera(mCreateType: 1).then((re) {
+                          this.res = re;
+                        });
+                      } else {
+                        checkPermission();
+                      }
+                    },
+                    child: Text('take camera'),
                   ),
-                ),
-            ],
-          ),
+                  RaisedButton(
+                    onPressed: () async {
+                      if (hasPermissions) {
+                        AliyunVideo.startCooperationVideo().then((res) {
+                          this.res = res;
+                        });
+                      } else {
+                        checkPermission();
+                      }
+                    },
+                    child: Text('take CooperationVideo'),
+                  ),
+                  RaisedButton(
+                    onPressed: () async {
+                      if (res != null) {
+                        if (res.fileType == 0) {
+                          Navigator.push(
+                              context,
+                              new MaterialPageRoute(
+                                  builder: (_) =>
+                                      VideoPlayerPage(res.filePath)));
+                        } else {
+                          setState(() {});
+                        }
+                      }
+                    },
+                    child: Text('play'),
+                  ),
+                  if (res != null && res.fileType == 1)
+                    Container(
+                      child: Image.file(
+                        File(
+                          res.filePath,
+                        ),
+                      ),
+                    ),
+                ],
+              ),
         ),
       ),
     );

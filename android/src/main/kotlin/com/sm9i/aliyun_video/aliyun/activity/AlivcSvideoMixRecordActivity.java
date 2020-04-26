@@ -335,7 +335,12 @@ public class AlivcSvideoMixRecordActivity extends AppCompatActivity {
 //                setResult(AlivcMixMediaActivity.RESPONSE_CODE, new Intent().putExtra("param", path));
                 Log.i("地址", path);
 //                finish();
-                EditorActivity.startEdit(AlivcSvideoMixRecordActivity.this, param);
+                Intent intent = new Intent();
+                intent.setClass(AlivcSvideoMixRecordActivity.this, PreVideoActivity.class);
+                intent.putExtra("videoPath", path);
+                startActivityForResult(intent, 100);
+
+//                EditorActivity.startEdit(AlivcSvideoMixRecordActivity.this, param);
             }
 
             @Override
@@ -396,7 +401,7 @@ public class AlivcSvideoMixRecordActivity extends AppCompatActivity {
             }
         }
         if (requestCode == 100) {
-            if (resultCode == AlivcEditView.resultCode) {
+            if (resultCode == PreVideoActivity.resultCode) {
                 if (data != null && data.hasExtra("res")) {
                     boolean isOk = data.getBooleanExtra("res", false);
                     if (isOk) {

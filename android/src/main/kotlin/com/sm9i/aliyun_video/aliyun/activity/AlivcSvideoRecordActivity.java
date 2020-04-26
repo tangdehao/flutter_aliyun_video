@@ -329,8 +329,12 @@ public class AlivcSvideoRecordActivity extends AppCompatActivity {
                 videoPath = path;
                 // setResult(RESPONSE_CODE, new Intent().putExtra("param", param));
                 // setResult(RESPONSE_VIDEO_CODE, new Intent().putExtra("param", mediaInfo.filePath));
+                Intent intent = new Intent();
+                intent.setClass(AlivcSvideoRecordActivity.this, PreVideoActivity.class);
+                intent.putExtra("videoPath", path);
+                startActivityForResult(intent, PREVIEW_REQUEST_CODE);
 //                finish();
-                EditorActivity.startEdit(AlivcSvideoRecordActivity.this, param);
+//                EditorActivity.startEdit(AlivcSvideoRecordActivity.this, param);
 //                 EditorActivity.startEdit(AlivcSvideoRecordActivity.this, param);
             }
 
@@ -405,21 +409,23 @@ public class AlivcSvideoRecordActivity extends AppCompatActivity {
                 }
 
             }
-        }
-        if (requestCode == 100) {
-            if (resultCode == AlivcEditView.resultCode) {
-                if (data != null && data.hasExtra("res")) {
-                    boolean isOk = data.getBooleanExtra("res", false);
-                    if (isOk) {
-                        setResult(RESPONSE_VIDEO_CODE, new Intent().putExtra("param", videoPath));
-//                        setResult(AlivcMixMediaActivity.RESPONSE_CODE, new Intent().putExtra("param", videoPath));
-                        finish();
-                    } else {
-                        videoRecordView.delete();
-                    }
+            if (resultCode == PreVideoActivity.resultCode) {
+                boolean isOk = data.getBooleanExtra("res", false);
+                if (isOk) {
+                    setResult(RESPONSE_VIDEO_CODE, new Intent().putExtra("param", videoPath));
+                    finish();
+                } else {
+                    videoRecordView.delete();
                 }
+
             }
         }
+
+//        if (requestCode == 100) {
+//            if (resultCode == AlivcEditView.resultCode) {
+//
+//            }
+//        }
     }
 
     @Override
