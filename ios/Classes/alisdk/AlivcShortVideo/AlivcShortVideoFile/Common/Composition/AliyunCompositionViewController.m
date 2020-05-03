@@ -235,7 +235,7 @@
     UILabel *tipsLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 64+top+5, ScreenWidth-20, 30)];
     tipsLabel.text = @"Only display videos shorter than 30 seconds";
     tipsLabel.font = [UIFont systemFontOfSize:16];
-    tipsLabel.backgroundColor = [UIColor whiteColor];
+    tipsLabel.textColor = [UIColor whiteColor];
     [self.view addSubview:tipsLabel];
 }
 
