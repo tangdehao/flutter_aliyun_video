@@ -173,9 +173,11 @@ AlivcRecordPasterViewDelegate>
     if (self.touchMode == AlivcRecordButtonTouchModeClick) {
         self.progressView.hidden = false;
         self.bottomView.rateSelectView.hidden = false;
+        self.bottomView.recordButttonView.timeLab.hidden = false;
     }else {
         self.progressView.hidden = true;
         self.bottomView.rateSelectView.hidden = true;
+        self.bottomView.recordButttonView.timeLab.hidden = false;
     }
     if (!self.finishBlock) {
         //隐藏照片,视频文字
@@ -571,6 +573,15 @@ AlivcRecordPasterViewDelegate>
 //        NSLog(@"有停止录制动作未完成");
 //        return NO;
 //    }
+    if (self.touchMode == AlivcRecordButtonTouchModeClick) {
+        self.progressView.hidden = false;
+        self.bottomView.rateSelectView.hidden = false;
+        self.bottomView.recordButttonView.timeLab.hidden = false;
+    }else {
+        self.progressView.hidden = true;
+        self.bottomView.rateSelectView.hidden = true;
+        self.bottomView.recordButttonView.timeLab.hidden = true;
+    }
     
     NSLog(@"tooooooouch:%ld",self.bottomView.toolView.touchMode);
     if (![self checkAVAuthorizationStatus]) {
