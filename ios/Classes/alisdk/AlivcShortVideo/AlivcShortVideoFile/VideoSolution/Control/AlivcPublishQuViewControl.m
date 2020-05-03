@@ -199,7 +199,7 @@
         CGFloat width = 60;
         CGFloat height = 28;
         _publishButton.frame = CGRectMake(0, 0, width, height);
-        [_publishButton setTitle:NSLocalizedString(@"发布" , nil) forState:UIControlStateNormal];
+        [_publishButton setTitle:NSLocalizedString(@"Next" , nil) forState:UIControlStateNormal];
         _publishButton.titleLabel.font = [UIFont systemFontOfSize:13];
         _publishButton.layer.cornerRadius =  2;
         _publishButton.clipsToBounds = YES;
